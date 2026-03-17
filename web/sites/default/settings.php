@@ -17,6 +17,7 @@ $databases['default']['default'] = [
 
 $settings['hash_salt'] = getenv('HASH_SALT');
 
+$settings['file_temp_path'] = '/tmp';
 $settings['file_private_path'] = '../private';
 
 if (getenv('REDIS_HOST')) {
