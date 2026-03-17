@@ -17,6 +17,7 @@ $databases['default']['default'] = [
 
 $settings['hash_salt'] = getenv('HASH_SALT');
 
+$settings['config_sync_directory'] = '../config';
 $settings['file_temp_path'] = '/tmp/drupal';
 $settings['file_private_path'] = '/var/www/private';
 
