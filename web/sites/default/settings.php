@@ -18,7 +18,7 @@ $databases['default']['default'] = [
 $settings['hash_salt'] = getenv('HASH_SALT');
 
 $settings['file_temp_path'] = '/tmp/drupal';
-$settings['file_private_path'] = '../private';
+$settings['file_private_path'] = '/var/www/private';
 
 if (getenv('REDIS_HOST')) {
   $settings['redis.connection']['host'] = getenv('REDIS_HOST');
