@@ -5,6 +5,25 @@
  */
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
+
+$databases['default']['default'] = [
+  'database' => getenv('DB_DATABASE'),
+  'username' => getenv('DB_USERNAME'),
+  'password' => getenv('DB_PASSWORD'),
+  'host' => getenv('DB_HOST'),
+  'port' => getenv('DB_PORT'),
+  'driver' => 'mysql',
+];
+
+$settings['hash_salt'] = getenv('HASH_SALT');
+
+$settings['file_private_path'] = '../private';
+
+if (getenv('REDIS_HOST')) {
+  $settings['redis.connection']['host'] = getenv('REDIS_HOST');
+  $settings['cache']['default'] = 'cache.backend.redis';
+}
+
 /**
  * Include the Pantheon-specific settings file.
  *
