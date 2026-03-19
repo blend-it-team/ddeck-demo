@@ -3005,16 +3005,16 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.14",
+            "version": "v0.3.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "9f0e371244eedfe2ebeaa72c79c54bb5df6e0176"
+                "reference": "4bb8107ec97651fd3f17f897d6489dbc4d8fb999"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/9f0e371244eedfe2ebeaa72c79c54bb5df6e0176",
-                "reference": "9f0e371244eedfe2ebeaa72c79c54bb5df6e0176",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/4bb8107ec97651fd3f17f897d6489dbc4d8fb999",
+                "reference": "4bb8107ec97651fd3f17f897d6489dbc4d8fb999",
                 "shasum": ""
             },
             "require": {
@@ -3058,9 +3058,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.14"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.15"
             },
-            "time": "2026-03-01T09:02:38+00:00"
+            "time": "2026-03-17T13:45:17+00:00"
         },
         {
             "name": "league/container",
@@ -8564,23 +8564,23 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.33.5",
+            "version": "v4.33.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "ebe8010a61b2ae0cff0d246fe1c4d44e9f7dfa6d"
+                "reference": "84b008c23915ed94536737eae46f41ba3bccfe67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/ebe8010a61b2ae0cff0d246fe1c4d44e9f7dfa6d",
-                "reference": "ebe8010a61b2ae0cff0d246fe1c4d44e9f7dfa6d",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/84b008c23915ed94536737eae46f41ba3bccfe67",
+                "reference": "84b008c23915ed94536737eae46f41ba3bccfe67",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=5.0.0 <8.5.27"
+                "phpunit/phpunit": ">=10.5.62 <11.0.0"
             },
             "suggest": {
                 "ext-bcmath": "Need to support JSON deserialization"
@@ -8602,9 +8602,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.5"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.6"
             },
-            "time": "2026-01-29T20:49:00+00:00"
+            "time": "2026-03-18T17:32:05+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -10036,16 +10036,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "6.0.2",
+            "version": "6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "897b5986ece6b4f9d8413fea345c7d49c757d6bf"
+                "reference": "7bae67520aa9f5ecc506d646810bd40d9da54582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/897b5986ece6b4f9d8413fea345c7d49c757d6bf",
-                "reference": "897b5986ece6b4f9d8413fea345c7d49c757d6bf",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/7bae67520aa9f5ecc506d646810bd40d9da54582",
+                "reference": "7bae67520aa9f5ecc506d646810bd40d9da54582",
                 "shasum": ""
             },
             "require": {
@@ -10095,9 +10095,9 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/6.0.2"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/6.0.3"
             },
-            "time": "2026-03-01T18:43:49+00:00"
+            "time": "2026-03-18T20:49:53+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -10380,11 +10380,11 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.41",
+            "version": "2.1.42",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a2eae8f20856b3afe74bf1f9726ce8c11438e300",
-                "reference": "a2eae8f20856b3afe74bf1f9726ce8c11438e300",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1279e1ce86ba768f0780c9d889852b4e02ff40d0",
+                "reference": "1279e1ce86ba768f0780c9d889852b4e02ff40d0",
                 "shasum": ""
             },
             "require": {
@@ -10429,7 +10429,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-16T18:24:10+00:00"
+            "time": "2026-03-17T14:58:32+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -13319,7 +13319,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/htmx": 10,
+        "drupal/radix_admin": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
