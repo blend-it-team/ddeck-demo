@@ -1,5 +1,5 @@
 {
-	"name": "ddeck-demo",
+	"name": "ddeck",
 	"description": "A custom Radix subtheme, based on Bootstrap 5.",
 	"private": true,
 	"engines": {

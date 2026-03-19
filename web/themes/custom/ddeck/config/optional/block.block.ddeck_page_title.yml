@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - ddeck-demo
-id: ddeck-demo_page_title
-theme: ddeck-demo
+    - ddeck
+id: ddeck_page_title
+theme: ddeck
 region: header
 weight: -2
 provider: null

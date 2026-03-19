@@ -1,7 +1,7 @@
-name: ddeck-demo
+name: ddeck
 description: ''
 screenshot: screenshot.png
-'alt text': 'ddeck-demo theme screenshot'
+'alt text': 'ddeck theme screenshot'
 core_version_requirement: ^11
 engine: twig
 type: theme
@@ -17,7 +17,7 @@ regions:
   sidebar_footer: 'Sidebar footer'
   content: Content
 libraries:
-  - ddeck-demo/style
+  - ddeck/style
 ckeditor5-stylesheets:
   - build/css/main.style.css
 version: 1.0.0

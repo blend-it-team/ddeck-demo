@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - ddeck-demo
-id: ddeck-demo_footer
-theme: ddeck-demo
+    - ddeck
+id: ddeck_footer
+theme: ddeck
 region: footer
 weight: -5
 provider: null

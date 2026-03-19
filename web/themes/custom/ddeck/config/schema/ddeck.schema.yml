@@ -1,0 +1,5 @@
+# Schema for the configuration files of the ddeck theme.
+
+ddeck.settings:
+  type: theme_settings
+  label: 'ddeck settings'

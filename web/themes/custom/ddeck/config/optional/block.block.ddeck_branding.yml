@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - ddeck-demo
-id: ddeck-demo_branding
-theme: ddeck-demo
+    - ddeck
+id: ddeck_branding
+theme: ddeck
 region: navbar_branding
 weight: -1
 provider: null

@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - ddeck-demo
-id: ddeck-demo_main_menu
-theme: ddeck-demo
+    - ddeck
+id: ddeck_main_menu
+theme: ddeck
 region: navbar_left
 weight: -5
 provider: null

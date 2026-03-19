@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - ddeck-demo
-id: ddeck-demo_messages
-theme: ddeck-demo
+    - ddeck
+id: ddeck_messages
+theme: ddeck
 region: header
 weight: -3
 provider: null
