@@ -29,6 +29,7 @@ packages:
     doctrine/deprecations: 1.1.6
     doctrine/instantiator: 2.0.0
     doctrine/lexer: 3.0.1
+    drupal/block_class: 4.0.2
     drupal/coder: 8.3.31
     drupal/core: 11.3.5
     drupal/core-composer-scaffold: 11.3.5
@@ -36,8 +37,17 @@ packages:
     drupal/core-project-message: 11.3.5
     drupal/core-recipe-unpack: 11.3.5
     drupal/core-recommended: 11.3.5
+    drupal/ctools: 4.1.0
+    drupal/field_formatter_class: 1.8.0
     drupal/gin: 5.0.12
     drupal/gin_toolbar: 3.0.3
+    drupal/htmx: 2.0.0-beta2
+    drupal/pathauto: 1.14.0
+    drupal/radix: 6.0.2
+    drupal/radix_admin: 6.0.0-alpha3
+    drupal/tagify: 1.2.50
+    drupal/token: 1.17.0
+    drupal/trash: 3.0.25
     drush/drush: 13.7.1
     egulias/email-validator: 4.0.4
     google/protobuf: v4.33.5

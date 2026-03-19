@@ -1,0 +1,12 @@
+/*!
+ * Select2 v4 Bootstrap 5 theme v1.3.0
+*/
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "../base/variables";
+
+// set the default border color to avoid error
+$s2bs5-border-color: rgba($gray-500, .175);
+@import "../../../../../contrib/radix_admin/assets/scss/select2/include-all";

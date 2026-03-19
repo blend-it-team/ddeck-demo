@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8564e0ce80a2454335f65a8b77b1b82a",
+    "content-hash": "7086c29b16249c577df03bf8d70c1736",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1083,6 +1083,106 @@
             "time": "2024-02-05T11:56:58+00:00"
         },
         {
+            "name": "drupal/block_class",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_class.git",
+                "reference": "4.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_class-4.0.2.zip",
+                "reference": "4.0.2",
+                "shasum": "10c30a6a113a00722cb42798692c3c0389c35a89"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.2",
+                    "datestamp": "1762734005",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Todd Nienkerk",
+                    "homepage": "https://www.drupal.org/u/todd-nienkerk",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Renato Gonçalves (RenatoG)",
+                    "homepage": "https://www.drupal.org/u/RenatoG",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Aaron Stanush",
+                    "homepage": "https://www.drupal.org/u/aaron-stanush",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "David Suissa (DYdave)",
+                    "homepage": "https://www.drupal.org/u/DYdave",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Four Kitchens",
+                    "homepage": "https://www.drupal.org/user/358502",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "berenddeboer",
+                    "homepage": "https://www.drupal.org/u/berenddeboer",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "elliotttf",
+                    "homepage": "https://www.drupal.org/u/elliotttf",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Michal Minecki (mirzu)",
+                    "homepage": "https://www.drupal.org/u/mirzu",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Patrick Coffey (pcoffey)",
+                    "homepage": "https://www.drupal.org/u/pcoffey",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Taylor Smith (tsmith512)",
+                    "homepage": "https://www.drupal.org/u/tsmith512",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Allows assigning classes, attributes and ID to blocks.",
+            "homepage": "https://www.drupal.org/project/block_class",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_class",
+                "issues": "https://www.drupal.org/project/issues/block_class",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "11.3.5",
             "source": {
@@ -1475,6 +1575,166 @@
             "time": "2026-03-06T09:54:42+00:00"
         },
         {
+            "name": "drupal/ctools",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ctools.git",
+                "reference": "4.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ctools-4.1.0.zip",
+                "reference": "4.1.0",
+                "shasum": "69f5889cf557df9e55519390e6a95cfa31b67874"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.1.0",
+                    "datestamp": "1718144949",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-3.x": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Vanderwater (EclipseGc)",
+                    "homepage": "https://www.drupal.org/u/eclipsegc",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jakob Perry (japerry)",
+                    "homepage": "https://www.drupal.org/u/japerry",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Tim Plunkett (tim.plunkett)",
+                    "homepage": "https://www.drupal.org/u/timplunkett",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "James Gilliland (neclimdul)",
+                    "homepage": "https://www.drupal.org/u/neclimdul",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Daniel Wehner (dawehner)",
+                    "homepage": "https://www.drupal.org/u/dawehner",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "merlinofchaos",
+                    "homepage": "https://www.drupal.org/user/26979"
+                },
+                {
+                    "name": "neclimdul",
+                    "homepage": "https://www.drupal.org/user/48673"
+                },
+                {
+                    "name": "sdboyer",
+                    "homepage": "https://www.drupal.org/user/146719"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                }
+            ],
+            "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
+            "homepage": "https://www.drupal.org/project/ctools",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ctools",
+                "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/field_formatter_class",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_formatter_class.git",
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_formatter_class-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "66f39802ac8ef43f362b7e3530280f751788f169"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1724880268",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Macpherson",
+                    "homepage": "https://www.drupal.org/u/andrewmacpherson",
+                    "role": "maintainer"
+                },
+                {
+                    "name": "Oleksandr Dekhteruk",
+                    "homepage": "https://www.drupal.org/u/pifagor",
+                    "role": "maintainer"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "mfer",
+                    "homepage": "https://www.drupal.org/user/25701"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
+                },
+                {
+                    "name": "vladimiraus",
+                    "homepage": "https://www.drupal.org/user/673120"
+                }
+            ],
+            "description": "Provides custom HTML class settings for field formatters.",
+            "homepage": "https://www.drupal.org/project/field_formatter_class",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_formatter_class",
+                "issues": "https://www.drupal.org/project/issues/field_formatter_class"
+            }
+        },
+        {
             "name": "drupal/gin",
             "version": "5.0.12",
             "source": {
@@ -1602,6 +1862,453 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/htmx",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/htmx.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/htmx-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "4daec74198315323ca58dcbcff8254d1bc92ce2b"
+            },
+            "require": {
+                "drupal/core": "^11.3",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "drush/drush": "^13"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1767965318",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Shawn Duncan",
+                    "homepage": "https://www.drupal.org/u/fathershawn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Fred Kroket",
+                    "homepage": "https://www.drupal.org/u/wouters_f",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Niels de Feyter",
+                    "homepage": "https://www.drupal.org/u/ndf",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "HTMX javascript library in Drupal.",
+            "homepage": "https://drupal.org/project/htmx",
+            "support": {
+                "source": "https://git.drupalcode.org/project/htmx",
+                "issues": "https://drupal.org/project/issues/htmx"
+            }
+        },
+        {
+            "name": "drupal/pathauto",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/pathauto.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "07f0d2efcf0bfb450e2ab69a43921fa39dc5f25b"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/ctools": "*",
+                "drupal/token": "*"
+            },
+            "conflict": {
+                "drush/drush": "<12.5.1"
+            },
+            "require-dev": {
+                "drupal/forum": "*"
+            },
+            "suggest": {
+                "drupal/redirect": "When installed Pathauto will provide a new \"Update Action\" in case your URLs change. This is the recommended update action and is considered the best practice for SEO and usability."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1759838097",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Freso",
+                    "homepage": "https://www.drupal.org/user/27504"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                },
+                {
+                    "name": "mably",
+                    "homepage": "https://www.drupal.org/user/3375160"
+                }
+            ],
+            "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
+            "homepage": "https://www.drupal.org/project/pathauto",
+            "support": {
+                "source": "https://cgit.drupalcode.org/pathauto",
+                "issues": "https://www.drupal.org/project/issues/pathauto",
+                "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/radix",
+            "version": "6.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/radix.git",
+                "reference": "6.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/radix-6.0.2.zip",
+                "reference": "6.0.2",
+                "shasum": "3bcad62aae4e213c50775c83edab742d9702840c"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "require-dev": {
+                "drush/drush": "^12 || ^13"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "6.0.2",
+                    "datestamp": "1746711637",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^12 || ^13"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sohail Lajevardi",
+                    "homepage": "https://www.drupal.org/user/504278",
+                    "email": "doxigo@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "doxigo",
+                    "homepage": "https://www.drupal.org/user/1331334"
+                },
+                {
+                    "name": "hosisam",
+                    "homepage": "https://www.drupal.org/user/3449435"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
+                }
+            ],
+            "description": "Radix is a Bootstrap 5 component-based base theme for Drupal. It has Bootstrap, Sass, BrowserSync and a lot more goodies built-in.",
+            "homepage": "https://www.drupal.org/project/radix",
+            "support": {
+                "source": "https://git.drupalcode.org/project/radix",
+                "issues": "https://www.drupal.org/project/issues/radix"
+            }
+        },
+        {
+            "name": "drupal/radix_admin",
+            "version": "6.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/radix_admin.git",
+                "reference": "6.0.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/radix_admin-6.0.0-alpha3.zip",
+                "reference": "6.0.0-alpha3",
+                "shasum": "f4a081182bd1a391ab197898376a58951ad5505e"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/radix": "^6.0"
+            },
+            "require-dev": {
+                "drush/drush": "^12 || ^13"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "6.0.0-alpha3",
+                    "datestamp": "1772808530",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^12 || ^13"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vahé Chahbenderian",
+                    "homepage": "https://www.drupal.org/u/wwwahe",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jean-Yves Gateau",
+                    "homepage": "https://www.drupal.org/u/jyyg",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "wwwahe",
+                    "homepage": "https://www.drupal.org/user/250936"
+                }
+            ],
+            "description": "Admin theme based on Radix theme. ",
+            "homepage": "https://www.drupal.org/project/radix",
+            "support": {
+                "source": "https://git.drupalcode.org/project/radix_admin",
+                "issues": "https://www.drupal.org/project/issues/radix_admin"
+            }
+        },
+        {
+            "name": "drupal/tagify",
+            "version": "1.2.50",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tagify.git",
+                "reference": "1.2.50"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tagify-1.2.50.zip",
+                "reference": "1.2.50",
+                "shasum": "3d42113c4fb24eaf949ebd9628cfdd1bd45bc03c"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/better_exposed_filters": "^7.0",
+                "drupal/facets": "^2.0",
+                "drupal/iconify_icons": "*",
+                "drupal/search_api": "^1.31",
+                "drupal/ui_icons": "*",
+                "drupal/ui_icons_field": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.50",
+                    "datestamp": "1772100007",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "David Galeano",
+                    "homepage": "https://www.drupal.org/u/gxleano"
+                }
+            ],
+            "description": "Integration with the Tagify JavaScript library.",
+            "homepage": "https://drupal.org/project/tagify",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tagify",
+                "issues": "https://www.drupal.org/project/issues/tagify"
+            }
+        },
+        {
+            "name": "drupal/token",
+            "version": "1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/token.git",
+                "reference": "8.x-1.17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.17.zip",
+                "reference": "8.x-1.17",
+                "shasum": "21d11adf0be16f1aa95b6348b4ceadbe9a625824"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "require-dev": {
+                "drupal/book": "^1 || ^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.17",
+                    "datestamp": "1767942434",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Provides a user interface for the Token API, some missing core tokens.",
+            "homepage": "https://www.drupal.org/project/token",
+            "support": {
+                "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/trash",
+            "version": "3.0.25",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/trash.git",
+                "reference": "3.0.25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/trash-3.0.25.zip",
+                "reference": "3.0.25",
+                "shasum": "ea75450a872cb339da9c46c1c4d7c89624978f02"
+            },
+            "require": {
+                "drupal/core": "^10.3 | ^11"
+            },
+            "conflict": {
+                "drush/drush": "<12.5.1"
+            },
+            "require-dev": {
+                "drupal/redirect": "*",
+                "drupal/wse": "*"
+            },
+            "suggest": {
+                "drush/drush": "^12 || ^13"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.25",
+                    "datestamp": "1770305751",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "amateescu",
+                    "homepage": "https://www.drupal.org/user/729614"
+                }
+            ],
+            "description": "This module adds a trash bin for all content entities.",
+            "homepage": "https://www.drupal.org/project/trash",
+            "support": {
+                "source": "https://git.drupalcode.org/project/trash"
+            }
         },
         {
             "name": "drush/drush",

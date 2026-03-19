@@ -1,0 +1,24 @@
+{
+  "name": "d-deck/base",
+  "description": "Simple base configuration for modern Drupal.",
+  "type": "drupal-recipe",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vahe Chahbenderian",
+      "homepage": "https://www.drupal.org/u/wwwahe"
+    }
+  ],
+  "require": {
+    "drupal/block_class": "^4.0",
+    "drupal/core": "^11.3",
+    "drupal/field_formatter_class": "^1.8",
+    "drupal/htmx": "^2.0@beta",
+    "drupal/radix": "^6.0",
+    "drupal/radix_admin": "^6.0@alpha",
+    "drupal/tagify": "^1.2",
+    "drupal/token": "^1.17",
+    "drupal/trash": "^3.0",
+    "drupal/pathauto" : "^1.14"
+  }
+}

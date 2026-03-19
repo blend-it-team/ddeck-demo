@@ -1,0 +1,26 @@
+name: ddeck-demo
+description: ''
+screenshot: screenshot.png
+'alt text': 'ddeck-demo theme screenshot'
+core_version_requirement: ^11
+engine: twig
+type: theme
+'base theme': radix_admin
+starterkit: true
+dependencies:
+  - 'drupal:radix'
+  - 'drupal:radix_admin'
+regions:
+  header: Header
+  header_expanded: 'Header expanded'
+  sidebar: Sidebar
+  sidebar_footer: 'Sidebar footer'
+  content: Content
+libraries:
+  - ddeck-demo/style
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+version: 1.0.0
+project: radix_admin
+datestamp: 1772808532
+generator: 'radix_starterkit:6.0.0-alpha3'
