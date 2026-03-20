@@ -2341,17 +2341,17 @@
         },
         {
             "name": "drupal/radix_admin",
-            "version": "6.0.0-alpha5",
+            "version": "6.0.0-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/radix_admin.git",
-                "reference": "6.0.0-alpha5"
+                "reference": "6.0.0-alpha6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/radix_admin-6.0.0-alpha5.zip",
-                "reference": "6.0.0-alpha5",
-                "shasum": "66e592389dcce661010b30152917844f3f4d5e65"
+                "url": "https://ftp.drupal.org/files/projects/radix_admin-6.0.0-alpha6.zip",
+                "reference": "6.0.0-alpha6",
+                "shasum": "7dcc025e3f5eb4b3ab6884c69e2810654ca879b2"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -2363,8 +2363,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-alpha5",
-                    "datestamp": "1774019381",
+                    "version": "6.0.0-alpha6",
+                    "datestamp": "1774022698",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"

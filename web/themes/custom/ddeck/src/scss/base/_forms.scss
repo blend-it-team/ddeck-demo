@@ -1,0 +1,5 @@
+// Global form elements styling
+// -----------------------------------------------------------------------------
+.form-wrapper, .form-group{
+  @extend .mb-3;
+}

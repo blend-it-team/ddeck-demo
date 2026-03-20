@@ -49,7 +49,7 @@ packages:
     drupal/htmx: 2.0.0-beta2
     drupal/pathauto: 1.14.0
     drupal/radix: 6.0.2
-    drupal/radix_admin: 6.0.0-alpha5
+    drupal/radix_admin: 6.0.0-alpha6
     drupal/tagify: 1.2.50
     drupal/token: 1.17.0
     drupal/trash: 3.0.25
