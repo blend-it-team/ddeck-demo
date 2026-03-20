@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7086c29b16249c577df03bf8d70c1736",
+    "content-hash": "51d31953bebe385058831690c89d4099",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1183,6 +1183,62 @@
             }
         },
         {
+            "name": "drupal/blockgroup",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/blockgroup.git",
+                "reference": "2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/blockgroup-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "3080718d95f1caf0feb0f0b00cc53394e94e4fa5"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.3",
+                    "datestamp": "1770846450",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "kiss.jozsef",
+                    "homepage": "https://www.drupal.org/user/2848443"
+                },
+                {
+                    "name": "norman.lol",
+                    "homepage": "https://www.drupal.org/user/2482808"
+                },
+                {
+                    "name": "znerol",
+                    "homepage": "https://www.drupal.org/user/63999"
+                }
+            ],
+            "description": "Add block groups to block configuration page.",
+            "homepage": "https://www.drupal.org/project/blockgroup",
+            "support": {
+                "source": "https://git.drupalcode.org/project/blockgroup"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "11.3.5",
             "source": {
@@ -1668,6 +1724,94 @@
             }
         },
         {
+            "name": "drupal/entity_page_title_manage_display",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_page_title_manage_display.git",
+                "reference": "1.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_page_title_manage_display-1.0.0-alpha1.zip",
+                "reference": "1.0.0-alpha1",
+                "shasum": "c374f1547365f11e7be4099e815cf2ffae5f4741"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha1",
+                    "datestamp": "1773665706",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "wwwahe",
+                    "homepage": "https://www.drupal.org/user/250936"
+                }
+            ],
+            "description": "For complex entity page title on full page display this module add a dedicated view mode to manage the title display",
+            "homepage": "https://www.drupal.org/project/entity_page_title_manage_display",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_page_title_manage_display"
+            }
+        },
+        {
+            "name": "drupal/entity_stretched_link",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_stretched_link.git",
+                "reference": "1.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_stretched_link-1.0.0-alpha1.zip",
+                "reference": "1.0.0-alpha1",
+                "shasum": "53d7754efd2688d463f05f27b7f79e4cc61c5352"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha1",
+                    "datestamp": "1773669078",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "wwwahe",
+                    "homepage": "https://www.drupal.org/user/250936"
+                }
+            ],
+            "description": "Add a stretched link to the entity to handle in Manage display",
+            "homepage": "https://www.drupal.org/project/entity_stretched_link",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_stretched_link"
+            }
+        },
+        {
             "name": "drupal/field_formatter_class",
             "version": "1.8.0",
             "source": {
@@ -1732,6 +1876,82 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_formatter_class",
                 "issues": "https://www.drupal.org/project/issues/field_formatter_class"
+            }
+        },
+        {
+            "name": "drupal/field_group",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_group.git",
+                "reference": "4.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_group-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "d3ff81d8a64b6ac392989b668cfa417be5101642"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "require-dev": {
+                "drupal/jquery_ui_accordion": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0",
+                    "datestamp": "1745478894",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "hydra",
+                    "homepage": "https://www.drupal.org/user/647364"
+                },
+                {
+                    "name": "joevagyok",
+                    "homepage": "https://www.drupal.org/user/2876343"
+                },
+                {
+                    "name": "jyve",
+                    "homepage": "https://www.drupal.org/user/591438"
+                },
+                {
+                    "name": "nils.destoop",
+                    "homepage": "https://www.drupal.org/user/361625"
+                },
+                {
+                    "name": "Stalski",
+                    "homepage": "https://www.drupal.org/user/322618"
+                },
+                {
+                    "name": "swentel",
+                    "homepage": "https://www.drupal.org/user/107403"
+                }
+            ],
+            "description": "Provides the field_group module.",
+            "homepage": "https://www.drupal.org/project/field_group",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_group",
+                "issues": "https://www.drupal.org/project/issues/field_group"
             }
         },
         {
@@ -1862,6 +2082,58 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/helper_class",
+            "version": "1.0.0-alpha8",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/helper_class.git",
+                "reference": "1.0.0-alpha8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/helper_class-1.0.0-alpha8.zip",
+                "reference": "1.0.0-alpha8",
+                "shasum": "e3e98bc41adfd01123f78b6f886a70247f98051d"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha8",
+                    "datestamp": "1770133548",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jyyg",
+                    "homepage": "https://www.drupal.org/user/3687876"
+                },
+                {
+                    "name": "tharsan",
+                    "homepage": "https://www.drupal.org/user/3041917"
+                },
+                {
+                    "name": "wwwahe",
+                    "homepage": "https://www.drupal.org/user/250936"
+                }
+            ],
+            "description": "Allows adding custom CSS classes to entity, view or fields",
+            "homepage": "https://www.drupal.org/project/helper_class",
+            "support": {
+                "source": "https://git.drupalcode.org/project/helper_class"
+            }
         },
         {
             "name": "drupal/htmx",
@@ -2069,17 +2341,17 @@
         },
         {
             "name": "drupal/radix_admin",
-            "version": "6.0.0-alpha3",
+            "version": "6.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/radix_admin.git",
-                "reference": "6.0.0-alpha3"
+                "reference": "6.0.0-alpha5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/radix_admin-6.0.0-alpha3.zip",
-                "reference": "6.0.0-alpha3",
-                "shasum": "f4a081182bd1a391ab197898376a58951ad5505e"
+                "url": "https://ftp.drupal.org/files/projects/radix_admin-6.0.0-alpha5.zip",
+                "reference": "6.0.0-alpha5",
+                "shasum": "66e592389dcce661010b30152917844f3f4d5e65"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -2091,8 +2363,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-alpha3",
-                    "datestamp": "1772808530",
+                    "version": "6.0.0-alpha5",
+                    "datestamp": "1774019381",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -13320,6 +13592,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/entity_page_title_manage_display": 15,
+        "drupal/entity_stretched_link": 15,
+        "drupal/helper_class": 15,
         "drupal/htmx": 10,
         "drupal/radix_admin": 15
     },

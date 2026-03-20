@@ -30,6 +30,7 @@ packages:
     doctrine/instantiator: 2.0.0
     doctrine/lexer: 3.0.1
     drupal/block_class: 4.0.2
+    drupal/blockgroup: 2.0.3
     drupal/coder: 8.3.31
     drupal/core: 11.3.5
     drupal/core-composer-scaffold: 11.3.5
@@ -38,13 +39,17 @@ packages:
     drupal/core-recipe-unpack: 11.3.5
     drupal/core-recommended: 11.3.5
     drupal/ctools: 4.1.0
+    drupal/entity_page_title_manage_display: 1.0.0-alpha1
+    drupal/entity_stretched_link: 1.0.0-alpha1
     drupal/field_formatter_class: 1.8.0
+    drupal/field_group: 4.0.0
     drupal/gin: 5.0.12
     drupal/gin_toolbar: 3.0.3
+    drupal/helper_class: 1.0.0-alpha8
     drupal/htmx: 2.0.0-beta2
     drupal/pathauto: 1.14.0
     drupal/radix: 6.0.2
-    drupal/radix_admin: 6.0.0-alpha3
+    drupal/radix_admin: 6.0.0-alpha5
     drupal/tagify: 1.2.50
     drupal/token: 1.17.0
     drupal/trash: 3.0.25
