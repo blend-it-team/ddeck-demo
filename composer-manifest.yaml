@@ -58,7 +58,7 @@ packages:
     drupal/pathauto: 1.14.0
     drupal/quickedit: 2.0.1
     drupal/radix: 6.0.2
-    drupal/radix_admin: 6.0.0-alpha8
+    drupal/radix_admin: 6.0.0-alpha9
     drupal/speculative_loading: 1.0.0-beta1
     drupal/tagify: 1.2.50
     drupal/token: 1.17.0
