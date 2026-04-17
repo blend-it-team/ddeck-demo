@@ -148,7 +148,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Navigation disable topbar": "./patches/disable-top-bar.patch"
+                "Navigation disable topbar": "https://www.drupal.org/files/issues/2026-02-06/disable-top-bar.patch"
             }
         },
         "drupal-core-project-message": {
