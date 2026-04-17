@@ -1,0 +1,22 @@
+diff --git a/core/modules/navigation/src/Hook/NavigationHooks.php b/core/modules/navigation/src/Hook/NavigationHooks.php
+index 540a2659..e5908aa1 100644
+--- a/core/modules/navigation/src/Hook/NavigationHooks.php
++++ b/core/modules/navigation/src/Hook/NavigationHooks.php
+@@ -87,7 +87,7 @@ public function pageTop(array &$page_top): void {
+     }
+     $this->navigationRenderer->removeToolbar($page_top);
+     $this->navigationRenderer->buildNavigation($page_top);
+-    $this->navigationRenderer->buildTopBar($page_top);
++    //$this->navigationRenderer->buildTopBar($page_top);
+   }
+ 
+   /**
+@@ -147,7 +147,7 @@ public function blockBuildLocalTasksBlockAlter(array &$build, BlockPluginInterfa
+     if ($this->currentUser->hasPermission('access navigation') &&
+       array_key_exists('page_actions', $this->topBarItemManager->getDefinitions())
+     ) {
+-      $this->navigationRenderer->removeLocalTasks($build, $block);
++      //$this->navigationRenderer->removeLocalTasks($build, $block);
+     }
+   }
+ 
