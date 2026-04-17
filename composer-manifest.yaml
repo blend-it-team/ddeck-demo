@@ -5,55 +5,65 @@ packages:
     brick/math: 0.14.8
     chi-teck/drupal-code-generator: 4.2.0
     colinodell/psr-testlogger: v1.3.1
-    composer/ca-bundle: 1.5.10
-    composer/class-map-generator: 1.7.1
-    composer/composer: 2.9.5
+    composer/ca-bundle: 1.5.11
+    composer/class-map-generator: 1.7.2
+    composer/composer: 2.9.7
     composer/installers: v2.3.0
     composer/metadata-minifier: 1.0.0
     composer/pcre: 3.3.2
     composer/semver: 3.4.4
-    composer/spdx-licenses: 1.5.9
+    composer/spdx-licenses: 1.6.0
     composer/xdebug-handler: 3.0.5
-    consolidation/annotated-command: 4.10.4
-    consolidation/config: 3.2.0
+    consolidation/annotated-command: 4.10.5
+    consolidation/config: 3.2.1
     consolidation/filter-via-dot-access-data: 2.0.3
-    consolidation/log: 3.1.1
-    consolidation/output-formatters: 4.7.0
+    consolidation/log: 3.1.2
+    consolidation/output-formatters: 4.7.1
     consolidation/robo: 5.1.1
-    consolidation/site-alias: 4.1.2
+    consolidation/site-alias: 4.1.3
     consolidation/site-process: 5.4.2
     cweagans/composer-configurable-plugin: 2.0.0
     cweagans/composer-patches: 2.0.0
     dealerdirect/phpcodesniffer-composer-installer: v1.2.0
     dflydev/dot-access-data: v3.0.3
     doctrine/deprecations: 1.1.6
-    doctrine/instantiator: 2.0.0
+    doctrine/instantiator: 2.1.0
     doctrine/lexer: 3.0.1
     drupal/block_class: 4.0.2
     drupal/blockgroup: 2.0.3
+    drupal/bootstrap_color_modes_toggler: 1.0.0-alpha2
+    drupal/ckeditor5_bootstrap: 1.0.1
+    drupal/ckeditor5_bootstrap_accordion: 1.0.2
     drupal/coder: 8.3.31
-    drupal/core: 11.3.5
-    drupal/core-composer-scaffold: 11.3.5
-    drupal/core-dev: 11.3.5
-    drupal/core-project-message: 11.3.5
-    drupal/core-recipe-unpack: 11.3.5
-    drupal/core-recommended: 11.3.5
+    drupal/color_field: 3.0.2
+    drupal/core: 11.3.7
+    drupal/core-composer-scaffold: 11.3.7
+    drupal/core-dev: 11.3.7
+    drupal/core-project-message: 11.3.7
+    drupal/core-recipe-unpack: 11.3.7
+    drupal/core-recommended: 11.3.7
+    drupal/crop: 2.6.0
     drupal/ctools: 4.1.0
-    drupal/entity_page_title_manage_display: 1.0.0-alpha1
+    drupal/entity_page_title_manage_display: 1.0.0-alpha2
     drupal/entity_stretched_link: 1.0.0-alpha1
-    drupal/field_formatter_class: 1.8.0
+    drupal/field_formatter_class: 1.9.0
     drupal/field_group: 4.0.0
+    drupal/filepond: 1.0.0-alpha4
+    drupal/focal_point: 2.1.2
     drupal/gin: 5.0.12
     drupal/gin_toolbar: 3.0.3
     drupal/helper_class: 1.0.0-alpha8
     drupal/htmx: 2.0.0-beta2
+    drupal/manage_display: 3.0.1
     drupal/pathauto: 1.14.0
+    drupal/quickedit: 2.0.1
     drupal/radix: 6.0.2
-    drupal/radix_admin: 6.0.0-alpha6
+    drupal/radix_admin: 6.0.0-alpha8
+    drupal/speculative_loading: 1.0.0-beta1
     drupal/tagify: 1.2.50
     drupal/token: 1.17.0
-    drupal/trash: 3.0.25
-    drush/drush: 13.7.1
+    drupal/trash: 3.0.26
+    drush/drush: 13.7.2
     egulias/email-validator: 4.0.4
     google/protobuf: v4.33.6
     grasmash/expander: 3.0.1
@@ -62,26 +72,34 @@ packages:
     guzzlehttp/promises: 2.3.0
     guzzlehttp/psr7: 2.8.1
     joachim-n/composer-manifest: 1.1.7
-    justinrainbow/json-schema: v6.7.2
-    laravel/prompts: v0.3.15
+    justinrainbow/json-schema: 6.8.0
+    laravel/prompts: v0.3.16
     league/container: 4.2.5
     lullabot/mink-selenium2-driver: v1.7.4
     lullabot/php-webdriver: v2.0.7
     marc-mabe/php-enum: v4.7.2
     masterminds/html5: 2.10.0
     mck89/peast: v1.17.5
-    mglaman/phpstan-drupal: 2.0.11
+    mglaman/phpstan-drupal: 2.0.13
     micheh/phpcs-gitlab: 2.1.0
     mikey179/vfsstream: v1.6.12
     myclabs/deep-copy: 1.13.4
     nikic/php-parser: v5.7.0
+    npm-asset/core-js: 3.48.0
+    npm-asset/custom-event-polyfill: 1.0.7
+    npm-asset/loadjs: 4.3.0
+    npm-asset/photoswipe: 4.1.3
+    npm-asset/plyr: 3.8.4
+    npm-asset/rangetouch: 2.0.1
+    npm-asset/url-polyfill: 1.1.14
+    npm-asset/yaireo--tagify: 4.36.0
     nyholm/psr7-server: 1.1.0
     oomphinc/composer-installers-extender: 2.0.1
-    open-telemetry/api: 1.8.0
-    open-telemetry/context: 1.4.0
+    open-telemetry/api: 1.9.0
+    open-telemetry/context: 1.5.0
     open-telemetry/exporter-otlp: 1.4.0
-    open-telemetry/gen-otlp-protobuf: 1.8.0
-    open-telemetry/sdk: 1.13.0
+    open-telemetry/gen-otlp-protobuf: 1.9.0
+    open-telemetry/sdk: 1.14.0
     open-telemetry/sem-conv: 1.38.0
     pantheon-systems/drupal-integrations: 11.2.0
     pear/archive_tar: 1.6.0
@@ -101,11 +119,11 @@ packages:
     phpdocumentor/reflection-docblock: 6.0.3
     phpdocumentor/type-resolver: 2.0.0
     phpowermove/docblock: v4.0
-    phpspec/prophecy: v1.26.0
+    phpspec/prophecy: v1.26.1
     phpspec/prophecy-phpunit: v2.5.0
     phpstan/extension-installer: 1.4.3
     phpstan/phpdoc-parser: 2.3.2
-    phpstan/phpstan: 2.1.42
+    phpstan/phpstan: 2.1.49
     phpstan/phpstan-deprecation-rules: 2.0.4
     phpstan/phpstan-phpunit: 2.0.16
     phpunit/php-code-coverage: 11.0.12
@@ -120,7 +138,7 @@ packages:
     psr/http-factory: 1.1.0
     psr/http-message: '2.0'
     psr/log: 3.0.2
-    psy/psysh: v0.12.21
+    psy/psysh: v0.12.22
     ralouphie/getallheaders: 3.0.3
     ramsey/collection: 2.1.1
     ramsey/uuid: 4.9.2
@@ -148,50 +166,50 @@ packages:
     slevomat/coding-standard: 8.22.1
     squizlabs/php_codesniffer: 3.13.5
     staabm/side-effects-detector: 1.0.5
-    symfony/browser-kit: v7.4.4
-    symfony/console: v7.4.7
-    symfony/css-selector: v7.4.6
-    symfony/dependency-injection: v7.4.7
+    symfony/browser-kit: v7.4.8
+    symfony/console: v7.4.8
+    symfony/css-selector: v7.4.8
+    symfony/dependency-injection: v7.4.8
     symfony/deprecation-contracts: v3.6.0
-    symfony/dom-crawler: v7.4.6
-    symfony/error-handler: v7.4.4
-    symfony/event-dispatcher: v7.4.4
+    symfony/dom-crawler: v7.4.8
+    symfony/error-handler: v7.4.8
+    symfony/event-dispatcher: v7.4.8
     symfony/event-dispatcher-contracts: v3.6.0
-    symfony/filesystem: v7.4.6
-    symfony/finder: v7.4.6
-    symfony/http-foundation: v7.4.7
-    symfony/http-kernel: v7.4.7
-    symfony/lock: v7.4.6
-    symfony/mailer: v7.4.6
-    symfony/mime: v7.4.7
+    symfony/filesystem: v7.4.8
+    symfony/finder: v7.4.8
+    symfony/http-foundation: v7.4.8
+    symfony/http-kernel: v7.4.8
+    symfony/lock: v7.4.8
+    symfony/mailer: v7.4.8
+    symfony/mime: v7.4.8
     symfony/polyfill-ctype: v1.33.0
     symfony/polyfill-iconv: v1.33.0
     symfony/polyfill-intl-grapheme: v1.33.0
     symfony/polyfill-intl-idn: v1.33.0
     symfony/polyfill-intl-normalizer: v1.33.0
     symfony/polyfill-mbstring: v1.33.0
-    symfony/polyfill-php73: v1.33.0
-    symfony/polyfill-php80: v1.33.0
-    symfony/polyfill-php81: v1.33.0
-    symfony/polyfill-php82: v1.33.0
-    symfony/polyfill-php83: v1.33.0
+    symfony/polyfill-php73: v1.36.0
+    symfony/polyfill-php80: v1.36.0
+    symfony/polyfill-php81: v1.36.0
+    symfony/polyfill-php82: v1.36.0
+    symfony/polyfill-php83: v1.36.0
     symfony/polyfill-php84: v1.33.0
     symfony/polyfill-php85: v1.33.0
-    symfony/process: v7.4.5
-    symfony/psr-http-message-bridge: v7.4.4
-    symfony/routing: v7.4.6
-    symfony/serializer: v7.4.7
+    symfony/process: v7.4.8
+    symfony/psr-http-message-bridge: v7.4.8
+    symfony/routing: v7.4.8
+    symfony/serializer: v7.4.8
     symfony/service-contracts: v3.6.1
-    symfony/string: v7.4.6
+    symfony/string: v7.4.8
     symfony/translation-contracts: v3.6.1
-    symfony/validator: v7.4.7
-    symfony/var-dumper: v7.4.6
-    symfony/var-exporter: v7.4.0
-    symfony/yaml: v7.4.6
+    symfony/validator: v7.4.8
+    symfony/var-dumper: v7.4.8
+    symfony/var-exporter: v7.4.8
+    symfony/yaml: v7.4.8
     tbachert/spi: v1.0.5
     theseer/tokenizer: 1.3.1
     twig/twig: v3.22.2
     webflo/drupal-finder: 1.3.1
-    webmozart/assert: 2.1.6
+    webmozart/assert: 2.3.0
     wikimedia/composer-merge-plugin: v2.1.0
     zaporylie/composer-drupal-optimizations: 1.2.0

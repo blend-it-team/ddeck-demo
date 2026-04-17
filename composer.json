@@ -24,6 +24,10 @@
         "cweagans/composer-patches": "^2.0",
         "drupal/block_class": "^4.0",
         "drupal/blockgroup": "^2.0",
+        "drupal/bootstrap_color_modes_toggler": "^1.0@alpha",
+        "drupal/ckeditor5_bootstrap": "^1.0",
+        "drupal/ckeditor5_bootstrap_accordion": "^1.0",
+        "drupal/color_field": "^3.0",
         "drupal/core": "^11.3",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
@@ -32,18 +36,26 @@
         "drupal/entity_page_title_manage_display": "^1.0@alpha",
         "drupal/entity_stretched_link": "^1.0@alpha",
         "drupal/field_formatter_class": "^1.8",
-        "drupal/field_group": "^4.0",
+        "drupal/field_group": "^4.0.0",
+        "drupal/filepond": "^1.0@alpha",
+        "drupal/focal_point": "^2.1.2",
         "drupal/gin": "^5.0",
         "drupal/helper_class": "^1.0@alpha",
         "drupal/htmx": "^2.0@beta",
+        "drupal/manage_display": "^3.0",
         "drupal/pathauto": "^1.14",
+        "drupal/quickedit": "^2.0",
         "drupal/radix": "^6.0",
         "drupal/radix_admin": "^6.0@alpha",
-        "drupal/tagify": "^1.2",
+        "drupal/speculative_loading": "^1.0@beta",
+        "drupal/tagify": "^1.2.50",
         "drupal/token": "^1.17",
         "drupal/trash": "^3.0",
         "drush/drush": "^13",
         "joachim-n/composer-manifest": "^1.0",
+        "npm-asset/photoswipe": "^4.1",
+        "npm-asset/plyr": "^3.8",
+        "npm-asset/yaireo--tagify": "^4.36",
         "oomphinc/composer-installers-extender": "^2.0.0",
         "pantheon-systems/drupal-integrations": "^11",
         "wikimedia/composer-merge-plugin": "^2.1",
@@ -133,6 +145,11 @@
         ],
         "patchLevel": {
             "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "Navigation disable topbar": "patches/disable-top-bar.patch"
+            }
         },
         "drupal-core-project-message": {
             "include-keys": [

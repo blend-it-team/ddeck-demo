@@ -1,2 +1,27 @@
 // Global elements styling, e.g. for headings, buttons, links, etc.
 // -----------------------------------------------------------------------------
+
+
+@view-transition {
+  navigation: auto;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.block-page-title-block {
+  view-transition-name: page-title;
+}
+.block-system-breadcrumb-block{
+  view-transition-name: breadcrumb;
+}
+.block-system-main-block{
+  view-transition-name: main-content;
+}
+
+a {
+  text-decoration: none;
+}

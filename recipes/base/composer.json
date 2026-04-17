@@ -10,6 +10,8 @@
     }
   ],
   "require": {
+    "d-deck/news-recipe": "^1.0@alpha",
+    "d-deck/advanced-media-recipe": "^1.0@alpha",
     "drupal/block_class": "^4.0",
     "drupal/core": "^11.3",
     "drupal/field_formatter_class": "^1.8",

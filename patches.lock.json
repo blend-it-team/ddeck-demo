@@ -1,4 +1,17 @@
 {
-    "_hash": "6142bfcb78f54dfbf5247ae5e463f25bdb8fff1890806e2e45aa81a59c211653",
-    "patches": []
+    "_hash": "6676dd31e6e0aa4a6f0c69e10a8a4463d44af196bf5bed74299ac5cf6c3d6265",
+    "patches": {
+        "drupal/core": [
+            {
+                "package": "drupal/core",
+                "description": "Navigation disable topbar",
+                "url": "patches/disable-top-bar.patch",
+                "sha256": "51a2a616e5b466223182167e33cfe277ad92004f45830526844161ac8970554a",
+                "depth": 2,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
 }
