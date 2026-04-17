@@ -148,7 +148,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Navigation disable topbar": "patches/disable-top-bar.patch"
+                "Navigation disable topbar": "./patches/disable-top-bar.patch"
             }
         },
         "drupal-core-project-message": {
