@@ -1,0 +1,15 @@
+uuid: 2143cf45-f42c-462d-a35b-be8e79d7471d
+langcode: en
+status: true
+dependencies:
+  module:
+    - advanced_media
+id: media_gallery
+label: 'Media Gallery '
+description: ''
+source: image_gallery
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_gallery
+field_map: {  }

@@ -1,5 +1,5 @@
 {
-  "name": "d-deck/base",
+  "name": "ddeck-common/base",
   "description": "Simple base configuration for modern Drupal.",
   "type": "drupal-recipe",
   "license": "GPL-2.0-or-later",
@@ -10,8 +10,6 @@
     }
   ],
   "require": {
-    "d-deck/news-recipe": "^1.0@alpha",
-    "d-deck/advanced-media-recipe": "^1.0@alpha",
     "drupal/block_class": "^4.0",
     "drupal/core": "^11.3",
     "drupal/field_formatter_class": "^1.8",

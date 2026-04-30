@@ -1,0 +1,22 @@
+{
+    "name": "ddeck-common/advanced_media_recipe",
+    "description": "Allow the user to contribute media in CKeditor with default Bootstrap 5 styling",
+    "keywords": ["recipe", "Drupal recipes", "drupal recipe"],
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "BlendIT",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+	"drupal/ddeck_advanced_media": "^1.0@alpha",	
+        "drupal/field_formatter_class": "^1.8",
+        "drupal/field_group": "^4.0",
+        "drupal/helper_class": "^1.0@alpha",
+        "npm-asset/photoswipe": "^5.4",
+        "npm-asset/plyr": "^3.8",
+        "drupal/filepond": "^1.0@alpha"
+    }
+}

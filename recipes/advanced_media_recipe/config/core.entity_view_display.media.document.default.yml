@@ -1,0 +1,80 @@
+uuid: d59d9080-31b4-476c-be5e-4300c88b5fc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_media_document
+    - image.style.thumbnail
+    - media.type.document
+  module:
+    - field_formatter_class
+    - field_group
+    - file
+    - helper_class
+    - image
+third_party_settings:
+  helper_class:
+    helper_class_values: 'container-sm mb-3 p-3 d-flex flex-row flex-grow-1 bg-light rounded'
+  field_group:
+    group_column:
+      children:
+        - name
+        - field_media_document
+      label: Column
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: 'd-flex flex-column justify-content-between flex-grow-1'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: xF_kTCPvM-jhEhhA7bxuFeer_jCBAeZxQIt90nQxjDA
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  field_media_document:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: 'fs-5 fw-normal '
+    weight: 1
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: 'rounded overflow-hidden bg-white'
+    weight: 3
+    region: content
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,59 @@
+name: 'DDECK Advanced Media'
+description: 'Allow the user to contribute media in CKeditor with default Bootstrap 5 styling'
+type: 'Media'
+
+install:
+  - ckeditor5
+  - advanced_media
+  - field_formatter_class
+  - field_group
+  - helper_class
+  - filepond
+  - image
+  - media
+  - media_library
+  - path
+
+config:
+  import:
+    media: '*'
+  # Lenient: if a config already exists and differs (e.g. entity form displays, editor), keep existing to avoid TypeError with strict list.
+  strict: false
+  actions:
+    filter.format.basic_html:
+      setFilterConfigs:
+        - instance_id: media_embed
+          configuration:
+            id: media_embed
+            provider: media
+            status: true
+            weight: 100
+            settings:
+              default_view_mode: default
+              allowed_view_modes: {  }
+              allowed_media_types: {  }
+        - instance_id: filter_html
+          configuration:
+            id: filter_html
+            provider: filter
+            status: true
+            weight: -10
+            settings:
+              allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <strong> <em> <code> <ul type> <ol type start> <li> <img src alt height width data-entity-uuid data-entity-type data-caption data-align> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
+              filter_html_help: false
+              filter_html_nofollow: false
+    filter.format.full_html:
+      setFilterConfig:
+        instance_id: media_embed
+        configuration:
+          id: media_embed
+          provider: media
+          status: true
+          weight: 100
+          settings:
+            default_view_mode: default
+            allowed_view_modes: {  }
+            allowed_media_types: {  }
+    # Editor config (basic_html, full_html) with drupalMedia + media_media is imported from config/ folder.
+    # No actions: full YAML is used so settings.plugins.media_media is present.
+

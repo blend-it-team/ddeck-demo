@@ -1,0 +1,35 @@
+uuid: 8704e8c0-2b10-4b21-ae9c-a1d1e1d56e06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.media_gallery.field_media_image_gallery
+    - media.type.media_gallery
+  module:
+    - advanced_media
+    - field_formatter_class
+    - helper_class
+third_party_settings:
+  helper_class:
+    helper_class_values: ''
+id: media.media_gallery.default
+targetEntityType: media
+bundle: media_gallery
+mode: default
+content:
+  field_media_image_gallery:
+    type: photoswipe_media_gallery
+    label: visually_hidden
+    settings:
+      thumb_image_style: media_library
+      pswp_image_style: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

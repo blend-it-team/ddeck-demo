@@ -1,0 +1,64 @@
+uuid: 101966d0-674f-4e96-928d-5dea326be2ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - filepond
+    - path
+_core:
+  default_config_hash: dWvuuhD3LlxilYlFQNngyiSrBRneJRpze-QKsuSvE-I
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_image:
+    type: filepond_image
+    weight: 0
+    region: content
+    settings:
+      preview_image_style: thumbnail
+      upload_prompt: ''
+      allow_reorder: true
+      item_panel_aspect_ratio: ''
+      preview_fit_mode: ''
+      columns: null
+      max_width: ''
+      max_files: 0
+      chunk_size: null
+      max_parallel_uploads: null
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  name: true

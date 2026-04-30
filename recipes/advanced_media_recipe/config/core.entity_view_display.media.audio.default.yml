@@ -1,0 +1,102 @@
+uuid: cfa0fe51-c798-4d64-a174-6b50821d458b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.audio.field_cover_image
+    - field.field.media.audio.field_media_audio_file
+    - image.style.thumbnail
+    - media.type.audio
+  module:
+    - field_formatter_class
+    - field_group
+    - helper_class
+    - image
+    - advanced_media
+third_party_settings:
+  helper_class:
+    helper_class_values: 'advanced-media--audio container-sm mb-3 p-3 d-flex flex-row flex-grow-1 bg-light rounded'
+  field_group:
+    group_column:
+      children:
+        - name
+        - field_media_audio_file
+      label: Column
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: 'd-flex flex-column justify-content-between flex-grow-1 mw-100'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: ozxOrP_0WvVhHqJUVsJB1CX1qrmaIjas_oniLp_pVPs
+id: media.audio.default
+targetEntityType: media
+bundle: audio
+mode: default
+content:
+  field_cover_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_formatter_class:
+        class: 'd-none d-sm-flex me-2 rounded overflow-hidden bg-white'
+    weight: 0
+    region: content
+  field_media_audio_file:
+    type: advanced_media_file_audio
+    label: hidden
+    settings:
+      resetOnEnd: true
+      controls:
+        play: true
+        progress: true
+        play-large: false
+        restart: false
+        rewind: false
+        fast-forward: false
+        current-time: false
+        duration: true
+        mute: false
+        volume: false
+        settings: false
+        airplay: false
+        pip: false
+        fullscreen: false
+      youtube:
+        noCookie: true
+      autoplay: false
+      loop: false
+      hideControls: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: 'ps-2 fs-5 fw-normal text-truncate'
+    weight: 0
+    region: content
+hidden:
+  created: true
+  thumbnail: true
+  uid: true

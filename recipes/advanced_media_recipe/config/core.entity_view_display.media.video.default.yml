@@ -1,0 +1,56 @@
+uuid: 18b90b0f-b3ca-4139-bb14-14d0a717b009
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+  module:
+    - field_formatter_class
+    - helper_class
+    - advanced_media
+third_party_settings:
+  helper_class:
+    helper_class_values: 'container-md mb-3 px-0'
+_core:
+  default_config_hash: 9QwjC8-v9UEC99AmqIDKYdX3bbeFomAnnyPgEVx0S1Y
+id: media.video.default
+targetEntityType: media
+bundle: video
+mode: default
+content:
+  field_media_video_file:
+    type: advanced_media_file_video
+    label: visually_hidden
+    settings:
+      resetOnEnd: true
+      hideControls: true
+      controls:
+        play: true
+        progress: true
+        current-time: true
+        duration: true
+        mute: true
+        volume: true
+        settings: true
+        fullscreen: true
+        play-large: false
+        restart: false
+        rewind: false
+        fast-forward: false
+        airplay: false
+        pip: false
+      youtube:
+        noCookie: true
+      autoplay: false
+      loop: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,14 @@
+uuid: 5e9f26d9-4f42-4662-a51d-095cc3009f29
+langcode: en
+status: true
+name: advanced_media_cover_82x82
+label: 'Advanced Media - Cover (82x82)'
+effects:
+  ba5e9ee4-5a2b-4a5a-a911-7fb731aee59e:
+    uuid: ba5e9ee4-5a2b-4a5a-a911-7fb731aee59e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 82
+      height: 82
+      anchor: center-center

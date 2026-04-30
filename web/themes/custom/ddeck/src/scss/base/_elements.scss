@@ -1,6 +1,9 @@
 // Global elements styling, e.g. for headings, buttons, links, etc.
 // -----------------------------------------------------------------------------
 
+:root {
+  --max-text-length : 60ch;
+}
 
 @view-transition {
   navigation: auto;
@@ -24,4 +27,13 @@ html {
 
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+  max-width: 40ch;
+}
+p, dd, li {
+  text-wrap: pretty;
+  max-width: var(--max-text-length);
 }

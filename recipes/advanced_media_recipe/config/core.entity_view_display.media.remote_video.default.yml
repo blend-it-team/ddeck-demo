@@ -1,0 +1,57 @@
+uuid: 298ab021-d522-4621-9073-1914db42e9a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - field_formatter_class
+    - helper_class
+    - advanced_media
+third_party_settings:
+  helper_class:
+    helper_class_values: 'container-md mb-3 px-0'
+_core:
+  default_config_hash: bVvab84KF6UZ6UQDcG-CJvI-JWgXRCBGWXc4K2DxuV4
+id: media.remote_video.default
+targetEntityType: media
+bundle: remote_video
+mode: default
+content:
+  field_media_oembed_video:
+    type: advanced_media_remote_video
+    label: hidden
+    settings:
+      autoplay: false
+      loop: false
+      resetOnEnd: true
+      hideControls: true
+      controls:
+        play-large: false
+        restart: false
+        rewind: false
+        play: true
+        fast-forward: false
+        progress: true
+        current-time: true
+        duration: false
+        mute: true
+        volume: true
+        captions: false
+        settings: true
+        pip: false
+        airplay: false
+        fullscreen: true
+      youtube:
+        noCookie: true
+    third_party_settings:
+      field_formatter_class:
+        class: 'w-100 h-auto'
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
