@@ -1,0 +1,25 @@
+uuid: 179357b5-26a0-4c16-bb8c-77151bfdd5dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - radix_admin
+_core:
+  default_config_hash: 3RagYyIzm5EeLElFA3_itJ1aSgzXOBIC9cn6oLjRngQ
+id: radix_admin_site_branding
+theme: radix_admin
+region: header
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

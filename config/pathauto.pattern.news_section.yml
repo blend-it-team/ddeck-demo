@@ -1,0 +1,24 @@
+uuid: 7ef3291a-f216-4853-9eea-7822879dea23
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: SXFuMY-9xNdP28T7wHMCDMlRfsaJHu_CEm4fVGJEGfc
+id: news_section
+label: 'News section'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/news/[term:name]'
+selection_criteria:
+  4ecd39d1-ba9b-471a-a94a-d701d69307f9:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 4ecd39d1-ba9b-471a-a94a-d701d69307f9
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      news_section: news_section
+selection_logic: and
+weight: -5
+relationships: {  }

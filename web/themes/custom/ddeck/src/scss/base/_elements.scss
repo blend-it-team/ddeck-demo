@@ -1,9 +1,6 @@
 // Global elements styling, e.g. for headings, buttons, links, etc.
 // -----------------------------------------------------------------------------
 
-:root {
-  --max-text-length : 60ch;
-}
 
 @view-transition {
   navigation: auto;
@@ -35,5 +32,13 @@ h1, h2, h3, h4 {
 }
 p, dd, li {
   text-wrap: pretty;
-  max-width: var(--max-text-length);
+}
+
+.breadcrumb {
+  margin: 0;
+  --bs-breadcrumb-divider : "›";
+  --bs-link-color-rgb: var(--bs-body-color-rgb);
+  --bs-link-opacity: 0.7;
+  --bs-breadcrumb-divider-color: var(--bs-tertiary-color);
+
 }

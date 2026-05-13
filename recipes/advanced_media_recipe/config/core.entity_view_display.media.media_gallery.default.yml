@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.media_gallery.field_media_image_gallery
     - media.type.media_gallery
   module:
-    - advanced_media
+    - ddeck_advanced_media
     - field_formatter_class
     - helper_class
 third_party_settings:

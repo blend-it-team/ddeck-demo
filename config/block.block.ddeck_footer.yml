@@ -1,0 +1,27 @@
+uuid: 581ddc83-9926-4751-8ffd-02f6b270d2e0
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - ddeck
+_core:
+  default_config_hash: oirI--LqN1vN4Mhaf4Befx_ZzR-Ha8Q6CECzkRt2daI
+id: ddeck_footer
+theme: ddeck
+region: sidebar_footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

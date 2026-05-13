@@ -1,0 +1,21 @@
+uuid: 10f2fba6-aa87-4438-aede-624abe958c3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - ddeck
+id: ddeck_searchform
+theme: ddeck
+region: header_expanded
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

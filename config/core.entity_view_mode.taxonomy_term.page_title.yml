@@ -1,0 +1,11 @@
+uuid: 3dee70b0-dba3-446b-a731-447b797a2d3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.page_title
+label: 'Page Title'
+description: null
+targetEntityType: taxonomy_term
+cache: true

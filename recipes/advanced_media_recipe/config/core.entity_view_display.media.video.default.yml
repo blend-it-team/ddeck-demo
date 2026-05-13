@@ -8,7 +8,7 @@ dependencies:
   module:
     - field_formatter_class
     - helper_class
-    - advanced_media
+    - ddeck_advanced_media
 third_party_settings:
   helper_class:
     helper_class_values: 'container-md mb-3 px-0'
@@ -20,7 +20,7 @@ bundle: video
 mode: default
 content:
   field_media_video_file:
-    type: advanced_media_file_video
+    type: ddeck_advanced_media_file_video
     label: visually_hidden
     settings:
       resetOnEnd: true

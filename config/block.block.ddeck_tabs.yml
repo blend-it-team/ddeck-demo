@@ -1,0 +1,20 @@
+uuid: 08dd0d62-3c16-4160-91d2-7c92e5bae394
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ddeck
+id: ddeck_tabs
+theme: ddeck
+region: content
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

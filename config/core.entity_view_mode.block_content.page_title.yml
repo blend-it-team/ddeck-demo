@@ -1,0 +1,11 @@
+uuid: ceeb53ac-7ca4-4bf8-859f-e68a9fe1972a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.page_title
+label: 'Page Title'
+description: null
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,69 @@
+uuid: 5b6e2725-33cc-4d07-8bc8-cdbd7bc41938
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.page_title
+    - field.field.node.news.body
+    - field.field.node.news.field_cover_image
+    - field.field.node.news.field_description
+    - field.field.node.news.field_news_section
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - field_formatter_class
+    - helper_class
+    - layout_builder
+    - manage_display
+third_party_settings:
+  helper_class:
+    helper_class_values: ''
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: kHvfMH0MG6xDMcYq-YfsS8dtL2oopD49y1zKJc7CxTU
+id: node.news.page_title
+targetEntityType: node
+bundle: news
+mode: page_title
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_news_section:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: label
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h1
+    third_party_settings:
+      field_formatter_class:
+        class: mb-0
+    weight: 1
+    region: content
+hidden:
+  author: true
+  author_picture: true
+  body: true
+  created: true
+  field_cover_image: true
+  field_tags: true
+  links: true
+  stretched_link: true
+  uid: true

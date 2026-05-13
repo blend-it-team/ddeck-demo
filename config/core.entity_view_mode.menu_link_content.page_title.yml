@@ -1,0 +1,11 @@
+uuid: 30cb4c83-3a30-4247-9306-19b3b9827989
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.page_title
+label: 'Page Title'
+description: null
+targetEntityType: menu_link_content
+cache: true

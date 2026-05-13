@@ -1,0 +1,26 @@
+uuid: 0d6c36ca-2305-4d05-843d-50aae5a7c263
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ddeck
+_core:
+  default_config_hash: 3ZfNe3wB9Z1Xz4GLNk_xwg3Bs2Gz05jAR32a8A54OI8
+id: ddeck_page_title
+theme: ddeck
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

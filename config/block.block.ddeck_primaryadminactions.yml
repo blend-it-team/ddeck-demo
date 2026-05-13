@@ -1,0 +1,23 @@
+uuid: 982166c2-1752-467f-a59f-4334f08338a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+  theme:
+    - ddeck
+third_party_settings:
+  block_class:
+    classes: 'my-3 text-end'
+id: ddeck_primaryadminactions
+theme: ddeck
+region: content
+weight: 1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

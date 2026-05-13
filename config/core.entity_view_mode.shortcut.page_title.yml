@@ -1,0 +1,11 @@
+uuid: 49a67890-0314-4c7a-82b4-e3bcb019bd25
+langcode: en
+status: true
+dependencies:
+  module:
+    - shortcut
+id: shortcut.page_title
+label: 'Page Title'
+description: null
+targetEntityType: shortcut
+cache: true

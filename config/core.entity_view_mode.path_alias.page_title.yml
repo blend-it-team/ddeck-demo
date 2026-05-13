@@ -1,0 +1,11 @@
+uuid: 65fe069c-9d5e-4ba1-b007-efdcd47e0219
+langcode: en
+status: true
+dependencies:
+  module:
+    - path_alias
+id: path_alias.page_title
+label: 'Page Title'
+description: null
+targetEntityType: path_alias
+cache: true

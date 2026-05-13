@@ -1,0 +1,13 @@
+uuid: d1359778-6e80-47cc-b8f8-85f127b833fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 8HVWvpRlQFchyKt3upV9oekFqFUDf2X6iFooZVRmrGY
+id: node.page_title
+label: 'Page Title'
+description: null
+targetEntityType: node
+cache: true

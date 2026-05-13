@@ -1,0 +1,36 @@
+uuid: 855e7871-fa23-49f1-a4dc-70435afa6ba5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - node.type.page
+  module:
+    - field_formatter_class
+    - helper_class
+    - text
+third_party_settings:
+  helper_class:
+    helper_class_values: ''
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: 'max-w-container center-childs'
+    weight: 0
+    region: content
+hidden:
+  created: true
+  links: true
+  stretched_link: true
+  title: true
+  uid: true

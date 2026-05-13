@@ -1,0 +1,31 @@
+uuid: 88bee593-1599-49b9-a879-c22a4b6cd631
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - ddeck
+third_party_settings:
+  block_class:
+    classes: p-3
+_core:
+  default_config_hash: 7vnoJIqIctH5gSw2zlnw7ViYisxJB1Y_L_nkopc93j8
+id: ddeck_main_menu
+theme: ddeck
+region: sidebar
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

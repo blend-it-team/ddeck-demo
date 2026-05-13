@@ -1,0 +1,22 @@
+uuid: af5d881b-69c7-4a0c-8a77-2281d5445b48
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ddeck
+_core:
+  default_config_hash: Yzhn0oV66_lXLKX2ymHyZtpTK_p1ojqtISn93QFQEXk
+id: ddeck_messages
+theme: ddeck
+region: content
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

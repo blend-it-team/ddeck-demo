@@ -1,0 +1,22 @@
+uuid: 7c3e040a-38b6-4a4f-a05f-ce0dfa393eaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ddeck
+_core:
+  default_config_hash: BoNhIbNHxfDFjFx2fMC4NJD6YLJcfhU1-8FYZbD5X_s
+id: ddeck_breadcrumbs
+theme: ddeck
+region: content
+weight: -3
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: fdef96db-ab39-48ce-bfd4-253791cacf34
+langcode: en
+status: true
+dependencies:
+  module:
+    - bootstrap_color_modes_toggler
+  theme:
+    - ddeck
+id: ddeck_bootstrapthemetoggler
+theme: ddeck
+region: header_expanded
+weight: -5
+provider: null
+plugin: bootstra_theme_toggler_block
+settings:
+  id: bootstra_theme_toggler_block
+  label: 'Bootstrap Theme Toggler'
+  label_display: '0'
+  provider: bootstrap_color_modes_toggler
+visibility: {  }

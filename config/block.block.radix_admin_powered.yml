@@ -1,0 +1,22 @@
+uuid: 23a929b1-a84c-49ca-97bd-df0c5fdb9eea
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - radix_admin
+_core:
+  default_config_hash: 6e4whBsuPJKhHMnHxSfTVbFSHGmtS4oylmLhEOis2f8
+id: radix_admin_powered
+theme: radix_admin
+region: sidebar_footer
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

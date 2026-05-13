@@ -1,0 +1,22 @@
+uuid: a81b57f5-de5f-4131-9dbe-d1cde41cad8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ddeck
+_core:
+  default_config_hash: 5TOXnkPS6wFK24bkdfjja_8pYKe_tCa6NHnLy6OPSbo
+id: ddeck_content
+theme: ddeck
+region: content
+weight: 2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

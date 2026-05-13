@@ -1,0 +1,22 @@
+uuid: 7e20a578-223b-4546-99e5-6773f0a3e8fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - radix_admin
+_core:
+  default_config_hash: hTpqZ7yRC-DYaciF294_HbfzYsPBjIFeYpMquvTaiZg
+id: radix_admin_breadcrumbs
+theme: radix_admin
+region: content
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - advanced_media
+    - ddeck_advanced_media
 id: media_gallery
 label: 'Media Gallery '
 description: ''

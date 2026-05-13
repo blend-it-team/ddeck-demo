@@ -1,0 +1,11 @@
+uuid: f1b54d96-ad22-47c2-a02d-3ca695e59a17
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.page_title
+label: 'Page Title'
+description: null
+targetEntityType: user
+cache: true

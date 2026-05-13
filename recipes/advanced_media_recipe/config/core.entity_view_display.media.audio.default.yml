@@ -12,7 +12,7 @@ dependencies:
     - field_group
     - helper_class
     - image
-    - advanced_media
+    - ddeck_advanced_media
 third_party_settings:
   helper_class:
     helper_class_values: 'advanced-media--audio container-sm mb-3 p-3 d-flex flex-row flex-grow-1 bg-light rounded'

@@ -4,5 +4,9 @@
     "/build/css/select2.css": "/build/css/select2.css",
     "/build/css/select2.css.map": "/build/css/select2.css.map",
     "/build/css/main.style.css": "/build/css/main.style.css",
-    "/build/css/main.style.css.map": "/build/css/main.style.css.map"
+    "/build/css/main.style.css.map": "/build/css/main.style.css.map",
+    "/build/fonts/Inter-Italic-VariableFont_opsz,wght.ttf": "/build/fonts/Inter-Italic-VariableFont_opsz,wght.ttf",
+    "/build/fonts/Inter-VariableFont_opsz,wght.ttf": "/build/fonts/Inter-VariableFont_opsz,wght.ttf",
+    "/build/fonts/OFL.txt": "/build/fonts/OFL.txt",
+    "/build/fonts/README.txt": "/build/fonts/README.txt"
 }

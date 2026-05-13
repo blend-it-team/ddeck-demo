@@ -1,0 +1,25 @@
+uuid: 06f83d04-f5a4-4526-bbea-42dce5a48958
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ddeck
+_core:
+  default_config_hash: aGXcCWU77JBrhgDPCdZbnIQG9lrrDiLtPD8GICmwV38
+id: ddeck_branding
+theme: ddeck
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

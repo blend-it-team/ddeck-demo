@@ -3,7 +3,7 @@
  * Variables should follow the $component-state-property-size formula for
  * consistent naming. Examples:
  * $nav-link-disabled-color
- * $modal-content-box-shadow-xs 
+ * $modal-content-box-shadow-xs
  *
  * Customization:
  * To customize Bootstrap variables:
@@ -18,3 +18,6 @@
 
 $form-label-margin-bottom:              .1rem;
 $form-label-font-weight:                600;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$line-height-base: 1.8;

@@ -1,0 +1,11 @@
+uuid: 96e81341-bd14-4089-9078-95b7b21e4fed
+langcode: en
+status: true
+dependencies:
+  module:
+    - block
+id: block.page_title
+label: 'Page Title'
+description: null
+targetEntityType: block
+cache: true

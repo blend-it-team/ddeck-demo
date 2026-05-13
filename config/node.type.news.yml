@@ -1,0 +1,33 @@
+uuid: 58903cf3-f20b-4dc3-9c7b-ead115f1a408
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: Se9sWfkoFogfTGFWqH0EpSpdoOIcvBSI8gs79X4pg9E
+name: News
+type: news
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

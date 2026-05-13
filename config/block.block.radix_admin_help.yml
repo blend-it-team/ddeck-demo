@@ -1,0 +1,22 @@
+uuid: a97f26a2-3883-40c8-a222-e259116826ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - radix_admin
+_core:
+  default_config_hash: mLETq0C2-bpybxHTLFV-FKw6MxYMg5ODZ0yxsrrAFQU
+id: radix_admin_help
+theme: radix_admin
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

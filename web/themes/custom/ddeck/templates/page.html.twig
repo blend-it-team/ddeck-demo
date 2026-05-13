@@ -46,7 +46,9 @@
   {% block page_sidebar %}
     {% if page.sidebar %}
       <aside class="layout-sidebar fixed d-lg-flex" id="sidebar">
-        {{ page.sidebar }}
+        <div class="sidebar-main">
+          {{ page.sidebar }}
+        </div>
         <div class="sidebar-footer">
           {{ page.sidebar_footer }}
         </div>

@@ -1,0 +1,11 @@
+uuid: 88bf7af9-48ef-4a36-bda7-b4da30b145db
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+id: crop.page_title
+label: 'Page Title'
+description: null
+targetEntityType: crop
+cache: true
