@@ -1,0 +1,9 @@
+entity.node.book_pages_order:
+  path: '/node/{node}/pages-order'
+  defaults:
+    _form: '\Drupal\book\Form\BookAdminEditForm'
+    _title: 'Pages orders'
+  requirements:
+    _custom_access: '\Drupal\book_extras\Access\PageOrderAccessCheck::access'
+    _entity_access: 'node.update'
+    node: \d+

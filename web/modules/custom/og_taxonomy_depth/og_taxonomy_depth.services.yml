@@ -1,0 +1,25 @@
+services:
+  og_taxonomy_depth.parent_resolver:
+    class: Drupal\og_taxonomy_depth\ParentGroupResolver
+    arguments:
+      - '@entity_type.manager'
+      - '@og.group_type_manager'
+      - '@og.group_audience_helper'
+
+  og_taxonomy_depth.rebuilder:
+    class: Drupal\og_taxonomy_depth\NodeGrantsRebuilder
+    arguments:
+      - '@entity_type.manager'
+      - '@og.group_type_manager'
+      - '@og.membership_manager'
+      - '@Drupal\node\NodeAccessRebuild'
+      - '@node.grant_storage'
+
+  og_taxonomy_depth.parent_access_subscriber:
+    class: Drupal\og_taxonomy_depth\EventSubscriber\ParentGroupAccessSubscriber
+    arguments:
+      - '@entity_type.manager'
+      - '@og.access'
+      - '@og.permission_manager'
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,3 @@
+administer openpanel:
+  title: 'Administer OpenPanel'
+  description: 'Configure OpenPanel analytics settings and manage the script cache.'

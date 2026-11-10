@@ -1,0 +1,32 @@
+services:
+  ddeck_analytics_openpanel.endpoint_resolver:
+    class: Drupal\ddeck_analytics_openpanel\Service\EndpointResolver
+    arguments:
+      - '@config.factory'
+
+  ddeck_analytics_openpanel.path_exclusion:
+    class: Drupal\ddeck_analytics_openpanel\Service\PathExclusion
+    arguments:
+      - '@config.factory'
+      - '@request_stack'
+
+  ddeck_analytics_openpanel.secret_resolver:
+    class: Drupal\ddeck_analytics_openpanel\Service\SecretResolver
+    arguments:
+      - '@config.factory'
+      - '@key.repository'
+
+  ddeck_analytics_openpanel.script_cache:
+    class: Drupal\ddeck_analytics_openpanel\Service\ScriptCache
+    arguments:
+      - '@cache.default'
+      - '@http_client'
+      - '@datetime.time'
+      - '@ddeck_analytics_openpanel.endpoint_resolver'
+
+  ddeck_analytics_openpanel.proxy_handler:
+    class: Drupal\ddeck_analytics_openpanel\Service\ProxyHandler
+    arguments:
+      - '@http_client'
+      - '@request_stack'
+      - '@ddeck_analytics_openpanel.secret_resolver'

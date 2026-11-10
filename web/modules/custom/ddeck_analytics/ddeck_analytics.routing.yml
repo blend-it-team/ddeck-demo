@@ -1,0 +1,7 @@
+ddeck_analytics.overview:
+  path: '/admin/config/ddeck-analytics'
+  defaults:
+    _controller: '\Drupal\ddeck_analytics\Controller\AnalyticsAdminController::overview'
+    _title: 'Analytics'
+  requirements:
+    _permission: 'administer site configuration'

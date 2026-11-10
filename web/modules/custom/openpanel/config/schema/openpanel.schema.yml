@@ -1,0 +1,27 @@
+openpanel.settings:
+  type: config_object
+  label: 'OpenPanel settings'
+  mapping:
+    client_id:
+      type: string
+      label: 'Client ID'
+    secret_key:
+      type: string
+      label: 'Secret key'
+    domain:
+      type: string
+      label: 'Domain'
+    track_screen:
+      type: boolean
+      label: 'Track page views automatically'
+    track_outgoing:
+      type: boolean
+      label: 'Track clicks on outgoing links'
+    track_attributes:
+      type: boolean
+      label: 'Track additional page attributes'
+    excluded_paths:
+      type: sequence
+      label: 'Excluded paths'
+      sequence:
+        type: string

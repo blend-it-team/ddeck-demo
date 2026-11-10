@@ -1,0 +1,7 @@
+name: 'CKEditor Bootstrap Accordion'
+type: module
+description: 'Adds a CKEditor 5 toolbar button for Bootstrap-style accordions using native details/summary elements.'
+core_version_requirement: ^10.3 || ^11 || ^12
+package: CKEditor
+dependencies:
+  - drupal:ckeditor5

@@ -1,0 +1,7 @@
+name: 'Book Extras'
+type: module
+description: 'Helpers and extra features to enhance Drupal Book core functionalities'
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+package: 'Custom'
+dependencies:
+  - drupal:book

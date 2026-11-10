@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the Shiki module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function shiki_requirements($phase): array {
+  if ($phase !== 'runtime') {
+    return [];
+  }
+
+  $installed = is_file(DRUPAL_ROOT . '/libraries/shiki/dist/bundle-full.mjs');
+
+  return [
+    'shiki_library' => [
+      'title' => t('Shiki library'),
+      'value' => $installed ? t('Installed') : t('Not installed'),
+      'description' => $installed ? '' : t('Require <code>npm-asset/shiki</code> with Composer so the package is installed in <code>libraries/shiki</code>.'),
+      'severity' => $installed ? REQUIREMENT_OK : REQUIREMENT_ERROR,
+    ],
+  ];
+}

@@ -1,121 +1,243 @@
 packages:
-    asm89/stack-cors: v2.3.0
+    asm89/stack-cors: v2.4.0
     behat/mink: v1.13.0
     behat/mink-browserkit-driver: v2.3.0
-    brick/math: 0.14.8
+    brick/math: 1.0.0
+    caxy/php-htmldiff: v0.1.17
     chi-teck/drupal-code-generator: 4.2.0
     colinodell/psr-testlogger: v1.3.1
-    composer/ca-bundle: 1.5.11
-    composer/class-map-generator: 1.7.3
-    composer/composer: 2.9.8
+    composer/ca-bundle: 1.6.1
+    composer/class-map-generator: 1.9.0
+    composer/composer: 2.11.1
     composer/installers: v2.3.0
-    composer/metadata-minifier: 1.0.0
-    composer/pcre: 3.3.2
+    composer/metadata-minifier: 1.0.1
+    composer/pcre: 3.4.0
     composer/semver: 3.4.4
     composer/spdx-licenses: 1.6.0
     composer/xdebug-handler: 3.0.5
-    consolidation/annotated-command: 4.10.5
-    consolidation/config: 3.2.1
+    consolidation/annotated-command: 4.10.6
+    consolidation/config: 3.2.2
     consolidation/filter-via-dot-access-data: 2.0.3
-    consolidation/log: 3.1.2
-    consolidation/output-formatters: 4.7.1
+    consolidation/log: 3.1.3
+    consolidation/output-formatters: 4.7.2
     consolidation/robo: 5.1.1
     consolidation/site-alias: 4.1.3
-    consolidation/site-process: 5.4.2
+    consolidation/site-process: 6.1.0
     cweagans/composer-configurable-plugin: 2.0.0
     cweagans/composer-patches: 2.0.0
-    ddeck-common/base: 1.0.0-beta1
-    ddeck-common/news-recipe: 'dev-main:dd9ffc36bb672c652ed780343478cd7234dd7b95'
+    ddeck-common/base: 1.0.0-beta2
+    ddeck-common/news-recipe: 'dev-main:faaa5fd0450a3d2f211bfa85e8ef157dda660126'
     dealerdirect/phpcodesniffer-composer-installer: v1.2.1
     dflydev/dot-access-data: v3.0.3
     doctrine/deprecations: 1.1.6
     doctrine/instantiator: 2.1.0
-    doctrine/lexer: 3.0.1
+    doctrine/lexer: 3.0.3
+    drupal/add_content_by_bundle: 2.0.2
+    drupal/ai: 1.5.2
+    drupal/ai_agents: 1.3.5
+    drupal/ai_ckeditor: 1.5.0-beta5
+    drupal/ai_content_suggestions: 1.5.2
+    drupal/ai_logging: 1.3.3
+    drupal/ai_provider_openai: 1.2.5
+    drupal/ai_search: 1.3.0-alpha6
+    drupal/ai_translate: 1.4.4
+    drupal/ai_validations: 1.4.0
+    drupal/ai_vdb_provider_qdrant: 1.3.3
+    drupal/ajax_comments: 1.0.0-beta8
+    drupal/backup_migrate: 5.1.5
+    drupal/better_exposed_filters: 8.0.0-alpha1
     drupal/block_class: 4.0.2
+    drupal/block_field: 1.0.0-rc5
     drupal/blockgroup: 2.0.3
-    drupal/bootstrap_color_modes_toggler: 1.0.0-alpha7
-    drupal/ckeditor5_bootstrap: 1.0.1
-    drupal/ckeditor5_bootstrap_accordion: 1.0.2
+    drupal/book: 3.0.8
+    drupal/bootstrap_color_modes_toggler: 2.0.0-alpha4
+    drupal/canvas: 1.12.0
+    drupal/ckeditor5_bootstrap: 1.0.2
+    drupal/ckeditor5_bootstrap_accordion: 1.1.0
     drupal/ckeditor5_max_block_width: 1.0.0-alpha2
+    drupal/ckeditor_details: 2.2.0-beta2
+    drupal/cl_editorial: 3.0.0
+    drupal/code_component: 1.0.0-alpha1
     drupal/coder: 8.3.31
+    drupal/coffee: 2.0.1
     drupal/color_field: 3.0.2
     drupal/config_ignore: 3.4.0
     drupal/config_partial_export: 2.0.0-beta1
-    drupal/core: 11.3.9
-    drupal/core-composer-scaffold: 11.3.9
-    drupal/core-dev: 11.3.9
-    drupal/core-project-message: 11.3.9
-    drupal/core-recipe-unpack: 11.3.9
-    drupal/core-recommended: 11.3.9
+    drupal/context: 5.0.0-rc2
+    drupal/core: 11.4.12
+    drupal/core-composer-scaffold: 11.4.12
+    drupal/core-dev: 11.4.12
+    drupal/core-project-message: 11.4.12
+    drupal/core-recipe-unpack: 11.4.12
+    drupal/core-recommended: 11.4.12
     drupal/crop: 2.6.0
-    drupal/ctools: 4.1.0
-    drupal/ddeck_advanced_media: 1.0.0-alpha4
-    drupal/easy_breadcrumb: 2.0.9
+    drupal/ctools: 4.1.1
+    drupal/ddeck_advanced_media: 1.0.0-alpha9
+    drupal/ddeck_entity_social_share: 2.0.0-alpha1
+    drupal/diff: 2.1.1
+    drupal/easy_breadcrumb: 2.0.11
     drupal/edit_media_modal: 2.1.0
-    drupal/entity_browser: 2.15.0
+    drupal/element_class_formatter: 2.1.3
+    drupal/embed: 1.10.0
+    drupal/embedded_content: 2.0.4
+    drupal/embedded_content_sdc: 1.0.1
+    drupal/entity: 1.8.0
+    drupal/entity_browser: 2.17.0
+    drupal/entity_embed: 1.7.0
+    drupal/entity_hierarchy: 5.0.0-rc2
     drupal/entity_page_title_manage_display: 1.0.0-alpha2
+    drupal/entity_pager: 2.0.0-alpha3
+    drupal/entity_reference_revisions: 1.15.0
     drupal/entity_stretched_link: 1.0.0-alpha1
-    drupal/eva: 3.1.1
+    drupal/eva: 3.1.2
+    drupal/fences: 3.0.9
+    drupal/fences_block: 2.0.0
     drupal/field_formatter_class: 1.9.0
-    drupal/field_group: 4.0.0
-    drupal/filepond: 1.0.0-alpha4
-    drupal/focal_point: 2.1.2
-    drupal/gin: 5.0.12
+    drupal/field_group: 4.1.0-beta1
+    drupal/field_validation: 3.0.0
+    drupal/field_widget_actions: 1.5.0
+    drupal/filepond: 1.0.0-alpha5
+    drupal/focal_point: 2.1.3
+    drupal/gin: 5.0.16
     drupal/gin_toolbar: 3.0.3
     drupal/helper_class: 1.0.0-alpha9
-    drupal/htmx: 2.0.0-rc1
-    drupal/manage_display: 3.0.1
-    drupal/metatag: 2.2.0
-    drupal/pathauto: 1.15.0
+    drupal/htmx: 2.0.0
+    drupal/inline_entity_form: 3.0.0
+    drupal/key: 1.23.0
+    drupal/link_attributes: 2.1.3
+    drupal/manage_display: 3.0.2
+    drupal/masquerade: 2.2.0
+    drupal/menu_link_attributes: 1.10.0
+    drupal/metatag: 2.2.6
+    drupal/modeler_api: 1.1.7
+    drupal/nouislider_js: 15.8.1
+    drupal/oembed_providers: 3.0.0
+    drupal/og: 2.0.2
+    drupal/openai_image_for_drupal: 2.0.0
+    drupal/pathauto: 1.16.0
+    drupal/prevnext: 4.0.0
+    drupal/prism: 2.2.3
+    drupal/profile: 1.16.0
     drupal/quickedit: 2.0.1
-    drupal/radix: 6.0.2
-    drupal/radix_admin: 6.0.0-alpha15
+    drupal/radix: 6.0.9
+    drupal/radix_admin: 6.0.0-alpha18
+    drupal/rat: 1.0.1
+    drupal/realname: 2.0.0
     drupal/redirect: 1.13.0
-    drupal/scheduler: 2.2.2
-    drupal/speculative_loading: 1.0.0-beta1
-    drupal/tagify: 1.2.51
-    drupal/token: 1.17.0
-    drupal/trash: 3.0.27
-    drush/drush: 13.7.3
+    drupal/registration: 3.4.9
+    drupal/scheduler: 2.3.1
+    drupal/search_api: 1.43.0
+    drupal/social_link_field: 2.1.0
+    drupal/speculative_loading: 1.0.0
+    drupal/stringoverrides: 2.0.1
+    drupal/tagify: 1.2.55
+    drupal/toc_api: 2.0.2
+    drupal/toc_filter: 2.4.0
+    drupal/token: 1.18.0
+    drupal/trash: 3.1.2
+    drupal/ui_icons: 1.1.3
+    drupal/url_embed: 3.0.3
+    drupal/views_entity_embed: 2.1.0
+    drupal/views_linkarea: 2.0.1
+    drupal/votingapi: 3.0.0-beta6
+    drupal/votingapi_reaction: 1.13.0
+    drupal/workflow_buttons: 1.0.0-beta7
+    drush/drush: 13.8.0
+    e0ipso/schema-forms: v2.5.4
+    e0ipso/shaper: 1.2.7
     egulias/email-validator: 4.0.4
-    google/protobuf: v4.33.6
+    embed/embed: v4.6.2
+    ezyang/htmlpurifier: v4.19.1
+    google/protobuf: v5.36.2
     grasmash/expander: 3.0.1
     grasmash/yaml-cli: 3.2.1
-    guzzlehttp/guzzle: 7.10.0
-    guzzlehttp/promises: 2.3.0
-    guzzlehttp/psr7: 2.8.1
+    guzzlehttp/guzzle: 7.16.1
+    guzzlehttp/promises: 2.6.0
+    guzzlehttp/psr7: 2.13.2
     joachim-n/composer-manifest: 1.1.7
     justinrainbow/json-schema: 6.8.2
-    laravel/prompts: v0.3.17
+    laravel/prompts: v0.3.27
+    league/commonmark: 2.10.7
+    league/config: v1.2.0
     league/container: 4.2.5
+    league/html-to-markdown: 5.2.3
     lullabot/mink-selenium2-driver: v1.7.4
     lullabot/php-webdriver: v2.0.7
     marc-mabe/php-enum: v4.7.2
-    masterminds/html5: 2.10.0
-    mck89/peast: v1.17.6
-    mglaman/phpstan-drupal: 2.0.15
+    masterminds/html5: 2.12.0
+    mck89/peast: v1.17.7
+    mglaman/phpstan-drupal: 2.3.0
     micheh/phpcs-gitlab: 2.1.0
     mikey179/vfsstream: v1.6.12
-    myclabs/deep-copy: 1.13.4
-    nikic/php-parser: v5.7.0
-    npm-asset/core-js: 3.48.0
-    npm-asset/custom-event-polyfill: 1.0.7
-    npm-asset/loadjs: 4.3.0
-    npm-asset/photoswipe: 4.1.3
-    npm-asset/plyr: 3.8.4
-    npm-asset/rangetouch: 2.0.1
-    npm-asset/url-polyfill: 1.1.14
-    npm-asset/yaireo--tagify: 4.37.1
+    mkalkbrenner/php-htmldiff-advanced: 0.0.8
+    ml/iri: 1.1.4
+    ml/json-ld: 1.2.1
+    myclabs/deep-copy: 1.14.0
+    nette/schema: v1.4.0
+    nette/utils: v4.1.6
+    nikic/php-parser: v5.9.0
+    npm-asset/apex-commons: 0.8.4
+    npm-asset/apexcharts: 8.7.0
+    npm-asset/ccount: 2.0.1
+    npm-asset/character-entities-html4: 2.1.0
+    npm-asset/character-entities-legacy: 3.0.0
+    npm-asset/comma-separated-tokens: 2.0.3
+    npm-asset/dequal: 2.0.3
+    npm-asset/devlop: 1.1.0
+    npm-asset/hast-util-to-html: 9.0.6
+    npm-asset/hast-util-whitespace: 3.0.0
+    npm-asset/html-void-elements: 3.0.0
+    npm-asset/mdast-util-to-hast: 13.2.1
+    npm-asset/micromark-util-character: 2.1.1
+    npm-asset/micromark-util-encode: 2.0.1
+    npm-asset/micromark-util-sanitize-uri: 2.0.1
+    npm-asset/micromark-util-symbol: 2.0.1
+    npm-asset/micromark-util-types: 2.0.3
+    npm-asset/oniguruma-parser: 0.12.2
+    npm-asset/oniguruma-to-es: 4.3.6
+    npm-asset/photoswipe: 5.4.4
+    npm-asset/property-information: 7.2.0
+    npm-asset/regex: 6.1.0
+    npm-asset/regex-recursion: 6.0.2
+    npm-asset/regex-utilities: 2.3.0
+    npm-asset/shiki: 4.6.0
+    npm-asset/shikijs--core: 4.6.0
+    npm-asset/shikijs--engine-javascript: 4.6.0
+    npm-asset/shikijs--engine-oniguruma: 4.6.0
+    npm-asset/shikijs--langs: 4.6.0
+    npm-asset/shikijs--primitive: 4.6.0
+    npm-asset/shikijs--themes: 4.6.0
+    npm-asset/shikijs--types: 4.6.0
+    npm-asset/shikijs--vscode-textmate: 10.1.0
+    npm-asset/space-separated-tokens: 2.0.2
+    npm-asset/stringify-entities: 4.0.4
+    npm-asset/trim-lines: 3.0.1
+    npm-asset/types--hast: 3.0.5
+    npm-asset/types--mdast: 4.0.4
+    npm-asset/types--unist: 3.0.3
+    npm-asset/ungap--structured-clone: 1.4.0
+    npm-asset/unist-util-is: 6.0.1
+    npm-asset/unist-util-position: 5.0.0
+    npm-asset/unist-util-stringify-position: 4.0.0
+    npm-asset/unist-util-visit: 5.2.0
+    npm-asset/unist-util-visit-parents: 6.1.0
+    npm-asset/vfile: 6.0.3
+    npm-asset/vfile-message: 4.0.3
+    npm-asset/videojs--cdn: 10.2.0
+    npm-asset/yaireo--tagify: 4.39.0
+    npm-asset/zwitch: 2.0.4
     nyholm/psr7-server: 1.1.0
     oomphinc/composer-installers-extender: 2.0.1
-    open-telemetry/api: 1.9.0
-    open-telemetry/context: 1.5.0
-    open-telemetry/exporter-otlp: 1.4.0
-    open-telemetry/gen-otlp-protobuf: 1.9.0
-    open-telemetry/sdk: 1.14.0
-    open-telemetry/sem-conv: 1.38.0
+    open-telemetry/api: 1.11.0
+    open-telemetry/context: 1.6.0
+    open-telemetry/exporter-otlp: 1.5.0
+    open-telemetry/gen-otlp-protobuf: 1.11.1
+    open-telemetry/sdk: 1.16.1
+    open-telemetry/sem-conv: 1.45.0
+    openai-php/client: v0.22.0
+    oscarotero/html-parser: v0.1.8
     pantheon-systems/drupal-integrations: 11.2.0
-    pear/archive_tar: 1.6.0
+    pear/archive_tar: 1.6.1
     pear/console_getopt: v1.4.3
     pear/pear-core-minimal: v1.10.18
     pear/pear_exception: v1.0.2
@@ -126,37 +248,39 @@ packages:
     php-http/discovery: 1.20.0
     php-http/guzzle7-adapter: 1.1.0
     php-http/httplug: 2.4.1
+    php-http/multipart-stream-builder: 1.4.2
     php-http/promise: 1.3.1
-    php-tuf/composer-stager: v2.0.2
-    phpdocumentor/reflection-common: 2.2.0
+    php-tuf/composer-stager: v2.1.1
+    phpdocumentor/reflection-common: 2.2.1
     phpdocumentor/reflection-docblock: 6.0.3
-    phpdocumentor/type-resolver: 2.0.0
+    phpdocumentor/type-resolver: 2.1.0
     phpowermove/docblock: v4.0
     phpspec/prophecy: v1.26.1
     phpspec/prophecy-phpunit: v2.5.0
     phpstan/extension-installer: 1.4.3
-    phpstan/phpdoc-parser: 2.3.2
-    phpstan/phpstan: 2.1.54
-    phpstan/phpstan-deprecation-rules: 2.0.4
-    phpstan/phpstan-phpunit: 2.0.16
+    phpstan/phpdoc-parser: 2.4.1
+    phpstan/phpstan: 2.3.5
+    phpstan/phpstan-deprecation-rules: 2.0.5
+    phpstan/phpstan-phpunit: 2.1.1
     phpunit/php-code-coverage: 11.0.12
     phpunit/php-file-iterator: 5.1.1
     phpunit/php-invoker: 5.0.1
     phpunit/php-text-template: 4.0.1
     phpunit/php-timer: 7.0.1
-    phpunit/phpunit: 11.5.55
+    phpunit/phpunit: 11.5.57
+    psr/cache: 3.0.0
     psr/container: 2.0.2
     psr/event-dispatcher: 1.0.0
     psr/http-client: 1.0.3
     psr/http-factory: 1.1.0
     psr/http-message: '2.0'
     psr/log: 3.0.2
-    psy/psysh: v0.12.22
+    psy/psysh: v0.12.24
     ralouphie/getallheaders: 3.0.3
     ramsey/collection: 2.1.1
-    ramsey/uuid: 4.9.2
+    ramsey/uuid: 4.9.4
     react/promise: v3.3.0
-    revolt/event-loop: v1.0.8
+    revolt/event-loop: v1.0.9
     sebastian/cli-parser: 3.0.2
     sebastian/code-unit: 3.0.3
     sebastian/code-unit-reverse-lookup: 4.0.1
@@ -172,57 +296,64 @@ packages:
     sebastian/recursion-context: 6.0.3
     sebastian/type: 5.1.3
     sebastian/version: 5.0.2
-    seld/jsonlint: 1.11.0
-    seld/phar-utils: 1.2.1
+    seld/jsonlint: 1.12.2
+    seld/phar-utils: 1.2.3
     seld/signal-handler: 2.0.2
     sirbrillig/phpcs-variable-analysis: v2.13.0
     slevomat/coding-standard: 8.22.1
-    squizlabs/php_codesniffer: 3.13.5
+    squizlabs/php_codesniffer: 3.13.6
     staabm/side-effects-detector: 1.0.5
-    symfony/browser-kit: v7.4.8
-    symfony/console: v7.4.11
-    symfony/css-selector: v7.4.9
-    symfony/dependency-injection: v7.4.10
-    symfony/deprecation-contracts: v3.6.0
-    symfony/dom-crawler: v7.4.8
-    symfony/error-handler: v7.4.8
-    symfony/event-dispatcher: v7.4.9
-    symfony/event-dispatcher-contracts: v3.6.0
-    symfony/filesystem: v7.4.11
-    symfony/finder: v7.4.8
-    symfony/http-foundation: v7.4.8
-    symfony/http-kernel: v7.4.11
-    symfony/lock: v7.4.9
-    symfony/mailer: v7.4.8
-    symfony/mime: v7.4.9
-    symfony/polyfill-ctype: v1.33.0
-    symfony/polyfill-iconv: v1.33.0
-    symfony/polyfill-intl-grapheme: v1.33.0
-    symfony/polyfill-intl-idn: v1.33.0
-    symfony/polyfill-intl-normalizer: v1.33.0
-    symfony/polyfill-mbstring: v1.33.0
+    symfony/browser-kit: v7.4.23
+    symfony/cache: v8.0.15
+    symfony/cache-contracts: v3.8.1
+    symfony/console: v7.4.23
+    symfony/css-selector: v7.4.22
+    symfony/dependency-injection: v7.4.23
+    symfony/deprecation-contracts: v3.7.1
+    symfony/dom-crawler: v7.4.22
+    symfony/error-handler: v7.4.22
+    symfony/event-dispatcher: v7.4.17
+    symfony/event-dispatcher-contracts: v3.7.1
+    symfony/expression-language: v7.4.21
+    symfony/filesystem: v7.4.23
+    symfony/finder: v7.4.23
+    symfony/http-foundation: v7.4.23
+    symfony/http-kernel: v7.4.23
+    symfony/intl: v7.4.22
+    symfony/lock: v7.4.23
+    symfony/mailer: v7.4.22
+    symfony/mime: v7.4.22
+    symfony/polyfill-ctype: v1.37.0
+    symfony/polyfill-iconv: v1.43.0
+    symfony/polyfill-intl-grapheme: v1.43.3
+    symfony/polyfill-intl-idn: v1.43.0
+    symfony/polyfill-intl-normalizer: v1.43.0
+    symfony/polyfill-mbstring: v1.43.3
     symfony/polyfill-php73: v1.37.0
-    symfony/polyfill-php80: v1.37.0
-    symfony/polyfill-php81: v1.37.0
-    symfony/polyfill-php82: v1.37.0
-    symfony/polyfill-php83: v1.37.0
-    symfony/polyfill-php84: v1.33.0
-    symfony/polyfill-php85: v1.33.0
-    symfony/process: v7.4.11
-    symfony/psr-http-message-bridge: v7.4.8
-    symfony/routing: v7.4.9
-    symfony/serializer: v7.4.10
-    symfony/service-contracts: v3.6.1
-    symfony/string: v7.4.11
-    symfony/translation-contracts: v3.6.1
-    symfony/validator: v7.4.10
-    symfony/var-dumper: v7.4.8
-    symfony/var-exporter: v7.4.9
-    symfony/yaml: v7.4.11
+    symfony/polyfill-php80: v1.43.0
+    symfony/polyfill-php81: v1.38.1
+    symfony/polyfill-php83: v1.43.0
+    symfony/polyfill-php84: v1.43.0
+    symfony/polyfill-php85: v1.43.0
+    symfony/polyfill-php86: v1.43.0
+    symfony/process: v7.4.22
+    symfony/psr-http-message-bridge: v7.4.21
+    symfony/routing: v7.4.23
+    symfony/runtime: v7.4.23
+    symfony/serializer: v7.4.23
+    symfony/service-contracts: v3.7.3
+    symfony/string: v7.4.22
+    symfony/translation-contracts: v3.7.1
+    symfony/validator: v7.4.23
+    symfony/var-dumper: v7.4.22
+    symfony/var-exporter: v7.4.22
+    symfony/yaml: v7.4.23
     tbachert/spi: v1.0.5
     theseer/tokenizer: 1.3.1
-    twig/twig: v3.22.2
+    twig/html-extra: v3.29.0
+    twig/twig: v3.30.0
     webflo/drupal-finder: 1.3.1
-    webmozart/assert: 2.3.0
+    webmozart/assert: 2.5.0
     wikimedia/composer-merge-plugin: v2.1.0
+    yethee/tiktoken: 0.5.1
     zaporylie/composer-drupal-optimizations: 1.2.0

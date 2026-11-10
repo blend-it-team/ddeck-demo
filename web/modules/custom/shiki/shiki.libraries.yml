@@ -1,0 +1,11 @@
+drupal.shiki:
+  version: VERSION
+  js:
+    js/shiki.js: {}
+  css:
+    component:
+      css/shiki.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once

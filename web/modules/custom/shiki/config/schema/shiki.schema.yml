@@ -1,0 +1,24 @@
+shiki.settings:
+  type: config_object
+  label: 'Shiki settings'
+  mapping:
+    theme_light:
+      type: string
+      label: 'Light theme'
+    theme_dark:
+      type: string
+      label: 'Dark theme'
+    languages:
+      type: sequence
+      label: 'Enabled languages'
+      sequence:
+        type: string
+        label: 'Language'
+
+filter_settings.shiki_filter:
+  type: mapping
+  label: 'Shiki filter settings'
+  mapping:
+    always_include_shiki_library:
+      type: boolean
+      label: 'Always include the Shiki library'

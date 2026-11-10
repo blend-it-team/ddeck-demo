@@ -1,0 +1,6 @@
+name: 'DDeck Analytics'
+type: module
+description: 'Provides analytics administration pages for DDeck.'
+core_version_requirement: ^11
+package: DDeck
+configure: ddeck_analytics.overview

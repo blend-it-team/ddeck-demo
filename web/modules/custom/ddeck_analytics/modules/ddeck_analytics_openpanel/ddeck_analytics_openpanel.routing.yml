@@ -1,0 +1,29 @@
+ddeck_analytics_openpanel.settings:
+  path: '/admin/config/ddeck-analytics/openpanel'
+  defaults:
+    _form: '\Drupal\ddeck_analytics_openpanel\Form\SettingsForm'
+    _title: 'OpenPanel'
+  requirements:
+    _permission: 'administer site configuration'
+
+ddeck_analytics_openpanel.op1_js:
+  path: '/ddeck-analytics-openpanel/op1.js'
+  defaults:
+    _controller: '\Drupal\ddeck_analytics_openpanel\Controller\ScriptController::serve'
+  requirements:
+    _access: 'TRUE'
+
+ddeck_analytics_openpanel.proxy:
+  path: '/ddeck-analytics-openpanel'
+  defaults:
+    _controller: '\Drupal\ddeck_analytics_openpanel\Controller\ProxyController::proxy'
+  requirements:
+    _access: 'TRUE'
+
+ddeck_analytics_openpanel.proxy.path:
+  path: '/ddeck-analytics-openpanel/{proxy_path}'
+  defaults:
+    _controller: '\Drupal\ddeck_analytics_openpanel\Controller\ProxyController::proxy'
+  requirements:
+    _access: 'TRUE'
+    proxy_path: '.+'

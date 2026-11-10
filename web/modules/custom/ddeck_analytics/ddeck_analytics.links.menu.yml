@@ -1,0 +1,6 @@
+ddeck_analytics.overview:
+  title: Analytics
+  description: 'DDeck analytics overview.'
+  route_name: ddeck_analytics.overview
+  parent: system.admin_config
+  weight: 50

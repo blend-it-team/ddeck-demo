@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Field Group Page Title Override.
+ */
+
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\field_group_page_title_override\PageTitleOverrideRender;
+
+/**
+ * Implements hook_block_view_alter().
+ *
+ * Alters ONLY the core "Page title" block rendering when a Page Title Override
+ * field group is configured on the entity full view mode.
+ */
+function field_group_page_title_override_block_view_alter(array &$build, BlockPluginInterface $block) {
+  if ($block->getPluginId() !== 'page_title_block') {
+    return;
+  }
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (!is_string($route_name)) {
+    return;
+  }
+
+  if (str_starts_with($route_name, 'entity.')
+    && (str_ends_with($route_name, '.canonical')
+      || str_ends_with($route_name, '.preview')
+      || str_ends_with($route_name, '.revision')
+      || str_ends_with($route_name, '.latest_version')
+    )) {
+
+    if (str_ends_with($route_name, '.preview')
+      && \Drupal::routeMatch()->getParameter('view_mode_id') !== 'full') {
+      return;
+    }
+
+    $build['#pre_render'][] = [PageTitleOverrideRender::class, 'renderPageTitleBlock'];
+  }
+}
+
+/**
+ * Implements hook_field_group_build_pre_render_alter().
+ *
+ * Hides Page Title Override field groups from the entity display output.
+ */
+function field_group_page_title_override_field_group_build_pre_render_alter(array &$element) {
+  if (empty($element['#fieldgroups']) || !is_array($element['#fieldgroups'])) {
+    return;
+  }
+
+  foreach ($element['#fieldgroups'] as $group_name => $group) {
+    if (($group->format_type ?? '') !== PageTitleOverrideRender::FORMAT_TYPE) {
+      continue;
+    }
+    if (isset($element[$group_name])) {
+      $element[$group_name]['#access'] = FALSE;
+    }
+  }
+}

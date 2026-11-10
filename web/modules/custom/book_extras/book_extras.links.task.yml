@@ -1,0 +1,5 @@
+entity.node.book_pages_order:
+  route_name: entity.node.book_pages_order
+  base_route: entity.node.canonical
+  title: Pages order
+  weight: 2

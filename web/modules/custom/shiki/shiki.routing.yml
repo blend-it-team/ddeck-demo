@@ -1,0 +1,7 @@
+shiki.settings:
+  path: '/admin/config/content/shiki'
+  defaults:
+    _form: '\Drupal\shiki\Form\SettingsForm'
+    _title: 'Shiki'
+  requirements:
+    _permission: 'administer shiki'

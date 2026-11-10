@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ * Theme hook for rendering ApexCharts.
+ */
+
+use Drupal\Component\Serialization\Json;
+
+/**
+ * Implements hook_theme().
+ */
+function ddeck_apexcharts_theme(): array {
+  return [
+    'ddeck_apexchart' => [
+      'variables' => [
+        'chart_options' => [],
+        'height' => '350px',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_HOOK() for ddeck_apexchart.
+ */
+function template_preprocess_ddeck_apexchart(array &$variables): void {
+  $variables['height'] = _ddeck_apexcharts_normalize_height($variables['height'] ?? NULL);
+  $options = $variables['chart_options'] ?? [];
+  if (!is_array($options)) {
+    $options = [];
+  }
+  if ($options === []) {
+    $variables['chart_options_json'] = '{}';
+    return;
+  }
+  $json = Json::encode($options);
+  $variables['chart_options_json'] = is_string($json) ? $json : '{}';
+}
+
+/**
+ * Normalizes a chart height to a CSS length.
+ *
+ * A bare number becomes pixels. A CSS length is kept. Anything else falls
+ * back to 350px.
+ *
+ * @param mixed $height
+ *   The height passed to the theme hook.
+ *
+ * @return string
+ *   A CSS length.
+ */
+function _ddeck_apexcharts_normalize_height(mixed $height): string {
+  if (is_int($height) || is_float($height)) {
+    return $height . 'px';
+  }
+  if (!is_string($height)) {
+    return '350px';
+  }
+  $height = trim($height);
+  if (preg_match('/^\d+(\.\d+)?$/', $height)) {
+    return $height . 'px';
+  }
+  if (preg_match('/^\d+(\.\d+)?(px|rem|em|vh|vw|%)$/', $height)) {
+    return $height;
+  }
+  return '350px';
+}

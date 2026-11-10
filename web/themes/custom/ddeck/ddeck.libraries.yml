@@ -4,10 +4,3 @@ style:
       build/css/main.style.css: {}
   js:
     build/js/main.script.js: {}
-  dependencies:
-    - core/drupal
-
-select2.theme:
-  css:
-    component:
-      build/css/select2.css: {}

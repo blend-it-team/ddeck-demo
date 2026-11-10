@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Improves the OG members overview experience.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\og_members_ui\Form\AddMemberForm;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function og_members_ui_entity_type_alter(array &$entity_types): void {
+  if (isset($entity_types['og_membership'])) {
+    $entity_types['og_membership']->setFormClass('og_members_ui_add', AddMemberForm::class);
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function og_members_ui_views_query_alter(ViewExecutable $view, QueryPluginBase $query): void {
+  if ($view->id() !== 'og_members_overview') {
+    return;
+  }
+
+  $roles_filter = $view->exposed_raw_input['roles_target_id'] ?? NULL;
+  if ($roles_filter === 'members-only') {
+    $query->where[1]['conditions'][0]['value'] = NULL;
+    $query->where[1]['conditions'][0]['operator'] = 'IS NULL';
+  }
+  elseif ($roles_filter === 'with-role') {
+    $query->where[1]['conditions'][0]['value'] = '';
+    $query->where[1]['conditions'][0]['operator'] = 'IS NOT NULL';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function og_members_ui_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state): void {
+  /** @var \Drupal\views\ViewExecutable|null $view */
+  $view = $form_state->get('view');
+  if (!$view || $view->id() !== 'og_members_overview' || !isset($form['roles_target_id'])) {
+    return;
+  }
+
+  if (count($view->args) < 2) {
+    return;
+  }
+
+  $entity_type_id = $view->args[0];
+  $id = $view->args[1];
+  $entity = \Drupal::entityTypeManager()->getStorage($entity_type_id)->load($id);
+  if (!$entity) {
+    return;
+  }
+
+  /** @var \Drupal\og\OgRoleManagerInterface $og_role_manager */
+  $og_role_manager = \Drupal::service('og.role_manager');
+  $roles = $og_role_manager->getRolesByBundle($entity_type_id, $entity->bundle());
+
+  $role_filter_options = [
+    'members-only' => t('Members'),
+  ];
+  foreach ($roles as $key => $role) {
+    if (preg_match('/-member$/', $key)) {
+      continue;
+    }
+    $role_filter_options[$key] = $role->label();
+  }
+
+  $form['roles_target_id']['#options'] = $role_filter_options;
+  $form['roles_target_id']['#type'] = 'select';
+  $form['roles_target_id']['#empty_option'] = t('All');
+  unset($form['roles_target_id']['#size']);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function og_members_ui_form_og_membership_default_edit_form_alter(array &$form, FormStateInterface $form_state): void {
+  $form['roles']['widget']['#description'] = '';
+  $form['state']['widget']['#description'] = '';
+}

@@ -1,0 +1,12 @@
+# cSpell:ignore accordion
+
+accordion:
+  js:
+    js/build/accordion.js: { preprocess: false, minified: true }
+  dependencies:
+    - core/ckeditor5
+
+admin.accordion:
+  css:
+    theme:
+      css/accordion.admin.css: { }

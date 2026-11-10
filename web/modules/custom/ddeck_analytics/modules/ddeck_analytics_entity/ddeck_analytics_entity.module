@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Theme hook for the entity analytics page.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_theme().
+ */
+function ddeck_analytics_entity_theme(): array {
+  return [
+    'ddeck_analytics_entity' => [
+      'variables' => [
+        'chart_attributes' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_HOOK() for ddeck_analytics_entity.
+ */
+function template_preprocess_ddeck_analytics_entity(array &$variables): void {
+  if (!$variables['chart_attributes'] instanceof Attribute) {
+    $variables['chart_attributes'] = new Attribute($variables['chart_attributes'] ?? []);
+  }
+}

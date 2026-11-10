@@ -1,0 +1,8 @@
+name: 'Organic Groups Members UI'
+type: module
+description: 'Adds a Members tab to OG group entities with a member list and modal add-member action.'
+core_version_requirement: ^10 || ^11
+package: Organic Groups
+dependencies:
+  - drupal:views
+  - og:og

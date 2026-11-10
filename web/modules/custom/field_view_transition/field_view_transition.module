@@ -1,0 +1,172 @@
+<?php
+
+/**
+ * @file
+ * Provides view-transition style settings for field formatters.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FormatterInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function field_view_transition_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.field_view_transition':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allows site administrators to set <code>view-transition-name</code> and <code>view-transition-class</code> styles on the outer HTML wrapper of any field display.') . '</p>';
+      $output .= '<h3>' . t('Configuration') . '</h3>';
+      $output .= '<p>' . t('The Field view transition settings are found in the Manage display tab for content types, users, and other entities. Text fields are available for each field, revealed by using the formatter settings edit button (gear wheel icon) for that field.') . '</p>';
+      $output .= '<p>' . t('This module supports the use of tokens in both settings (for example <code>field-[node:nid]</code>). For more information about tokens, see the <a href="https://www.drupal.org/node/390482">online token documentation</a>. If the Token module is installed, a token browser link will be available with the formatter settings.') . '</p>';
+      return $output;
+
+    default:
+      break;
+  }
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary_alter().
+ */
+function field_view_transition_field_formatter_settings_summary_alter(array &$summary, array $context) {
+  $name = $context['formatter']->getThirdPartySetting('field_view_transition', 'name');
+  $class = $context['formatter']->getThirdPartySetting('field_view_transition', 'class');
+
+  if (!empty($name)) {
+    $summary[] = t('View transition name: @name', ['@name' => $name]);
+  }
+  if (!empty($class)) {
+    $summary[] = t('View transition class: @class', ['@class' => $class]);
+  }
+}
+
+/**
+ * Implements hook_field_formatter_third_party_settings_form().
+ *
+ * Adds view-transition name and class textfields to all formatters.
+ */
+function field_view_transition_field_formatter_third_party_settings_form(FormatterInterface $plugin, FieldDefinitionInterface $field_definition, $view_mode, array $form, FormStateInterface $form_state) {
+  $element['name'] = [
+    '#type' => 'textfield',
+    '#title' => t('Field view transition name'),
+    '#description' => t('Plain CSS name applied as <code>style="view-transition-name:…"</code> on the field wrapper. Tokens are supported, e.g. <code>field-[node:nid]</code>.'),
+    '#default_value' => $plugin->getThirdPartySetting('field_view_transition', 'name'),
+    '#maxlength' => 256,
+    '#element_validate' => ['field_view_transition_validate_css_name'],
+  ];
+  $element['class'] = [
+    '#type' => 'textfield',
+    '#title' => t('Field view transition class'),
+    '#description' => t('Plain CSS name applied as <code>style="view-transition-class:…"</code> on the field wrapper. Tokens are supported, e.g. <code>field-[node:nid]</code>.'),
+    '#default_value' => $plugin->getThirdPartySetting('field_view_transition', 'class'),
+    '#maxlength' => 256,
+    '#element_validate' => ['field_view_transition_validate_css_name'],
+  ];
+  if (\Drupal::moduleHandler()->moduleExists('token')) {
+    $element['token_help'] = [
+      '#theme' => 'token_tree_link',
+      '#token_types' => [$field_definition->getTargetEntityTypeId()],
+    ];
+  }
+  return $element;
+}
+
+/**
+ * Validates that a value is a plain CSS name, optionally with tokens.
+ *
+ * @param array $element
+ *   The form element.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ */
+function field_view_transition_validate_css_name(array &$element, FormStateInterface $form_state) {
+  $value = $element['#value'];
+  if ($value === '' || $value === NULL) {
+    return;
+  }
+
+  // Replace tokens with a placeholder letter so patterns like "field-[node:nid]"
+  // can be validated as a CSS custom-ident shape.
+  $normalized = preg_replace('/\[[^\[\]]+\]/', 'x', $value);
+  if (!preg_match('/^[A-Za-z_][\w-]*$/', $normalized)) {
+    $form_state->setError($element, t('The value must be a plain CSS name (start with a letter or underscore; only letters, numbers, underscores, and dashes), optionally including tokens such as [node:nid].'));
+  }
+}
+
+/**
+ * Replaces tokens in a setting value and returns a valid CSS custom-ident, or ''.
+ *
+ * @param string $value
+ *   The configured value, which may contain tokens.
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   The entity being rendered.
+ *
+ * @return string
+ *   A sanitized CSS custom-ident, or an empty string if invalid/empty.
+ */
+function field_view_transition_resolve_css_name(string $value, $entity): string {
+  if ($value === '') {
+    return '';
+  }
+
+  /** @var \Drupal\Core\Utility\Token $token */
+  $token = \Drupal::service('token');
+  $resolved = $token->replace($value, [$entity->getEntityTypeId() => $entity], ['clear' => TRUE]);
+  $resolved = trim($resolved);
+
+  if ($resolved === '' || !preg_match('/^[A-Za-z_][\w-]*$/', $resolved)) {
+    return '';
+  }
+
+  return Html::escape($resolved);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for field templates.
+ *
+ * Adds view-transition styles to the field wrapper attributes.
+ */
+function field_view_transition_preprocess_field(array &$variables) {
+  if (!isset($variables['element']['#third_party_settings']['field_view_transition'])) {
+    return;
+  }
+
+  if (empty($variables['element']['#object'])) {
+    return;
+  }
+
+  /** @var \Drupal\Core\Entity\EntityInterface $entity */
+  $entity = $variables['element']['#object'];
+  $settings = $variables['element']['#third_party_settings']['field_view_transition'];
+  $styles = [];
+
+  if (!empty($settings['name'])) {
+    $name = field_view_transition_resolve_css_name($settings['name'], $entity);
+    if ($name !== '') {
+      $styles[] = 'view-transition-name:' . $name;
+    }
+  }
+  if (!empty($settings['class'])) {
+    $class = field_view_transition_resolve_css_name($settings['class'], $entity);
+    if ($class !== '') {
+      $styles[] = 'view-transition-class:' . $class;
+    }
+  }
+
+  if (!$styles) {
+    return;
+  }
+
+  $existing = $variables['attributes']['style'] ?? '';
+  if (is_array($existing)) {
+    $existing = implode(';', $existing);
+  }
+  $existing = trim((string) $existing);
+  $new_style = implode(';', $styles) . ';';
+  $variables['attributes']['style'] = $existing === '' ? $new_style : rtrim($existing, ';') . ';' . $new_style;
+}

@@ -1,0 +1,5 @@
+shiki.settings:
+  title: 'Shiki'
+  description: 'Configure syntax highlighting themes and languages.'
+  route_name: shiki.settings
+  parent: system.admin_config_content

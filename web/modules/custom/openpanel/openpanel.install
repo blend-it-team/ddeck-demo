@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the OpenPanel module.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_update_N().
+ *
+ * Adds the optional secret_key setting for Key module integration.
+ */
+function openpanel_update_10001(): void {
+  $config = \Drupal::configFactory()->getEditable('openpanel.settings');
+  if ($config->get('secret_key') === NULL) {
+    $config->set('secret_key', '')->save(TRUE);
+  }
+}

@@ -1,0 +1,6 @@
+ddeck_analytics_openpanel.settings:
+  title: OpenPanel
+  description: 'Configure OpenPanel analytics tracking.'
+  route_name: ddeck_analytics_openpanel.settings
+  parent: ddeck_analytics.overview
+  weight: 10

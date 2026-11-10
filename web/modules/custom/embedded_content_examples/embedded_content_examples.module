@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * The module file with theming functions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function embedded_content_examples_theme($existing, $type, $theme, $path) {
+  return [
+    'embedded_content_call_to_action' => [
+      'variables' => [
+        'text' => NULL,
+        'url' => NULL,
+      ],
+      'template' => 'embedded-content/call-to-action',
+    ],
+    'embedded_content_counter' => [
+      'variables' => [
+        'start_at' => NULL,
+      ],
+      'template' => 'embedded-content/counter',
+    ],
+    'embedded_content_styled_list' => [
+      'variables' => [
+        'items' => NULL,
+        'style' => NULL,
+      ],
+      'template' => 'embedded-content/styled-list',
+    ],
+  ];
+}

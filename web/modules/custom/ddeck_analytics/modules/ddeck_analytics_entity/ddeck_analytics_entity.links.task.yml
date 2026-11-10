@@ -1,0 +1,3 @@
+ddeck_analytics_entity.entities:
+  deriver: 'Drupal\ddeck_analytics_entity\Plugin\Derivative\EntityAnalyticsLocalTasks'
+  weight: 50

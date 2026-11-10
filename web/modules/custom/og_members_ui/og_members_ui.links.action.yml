@@ -1,0 +1,3 @@
+og_members_ui.member_add:
+  class: \Drupal\og_members_ui\Plugin\Menu\LocalAction\AddMemberModalLocalAction
+  deriver: \Drupal\og_members_ui\Plugin\Derivative\OgMembersUiLocalAction

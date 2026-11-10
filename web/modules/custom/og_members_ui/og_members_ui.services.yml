@@ -1,0 +1,6 @@
+services:
+  og_members_ui.route_subscriber:
+    class: Drupal\og_members_ui\Routing\RouteSubscriber
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: event_subscriber }

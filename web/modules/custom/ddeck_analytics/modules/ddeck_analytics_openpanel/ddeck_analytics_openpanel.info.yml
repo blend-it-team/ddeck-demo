@@ -1,0 +1,10 @@
+name: 'DDeck Analytics OpenPanel'
+type: module
+description: 'OpenPanel analytics integration for DDeck Analytics with ad-blocker resistant script caching and API proxying.'
+core_version_requirement: ^11
+package: DDeck
+configure: ddeck_analytics_openpanel.settings
+dependencies:
+  - ddeck_analytics:ddeck_analytics
+  - ddeck_analytics:ddeck_analytics_entity
+  - key:key

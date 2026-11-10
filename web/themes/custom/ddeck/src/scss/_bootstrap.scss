@@ -1,55 +1,45 @@
-// Note that some Bootstrap modules under "Required" section are needed no matter what.
+// Bootstrap 6 parts. Comment out unused modules.
+// @see https://getbootstrap.com/docs/6.0/customize/sass/#importing
 // -----------------------------------------------------------------------------
 
-// Required
-@import "init";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
+@use "base/variables" as *;
 
-// Include any optional Bootstrap modules as you like, remove unneeded ones
-// ------------------------------------------------------------------------------
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/containers";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/transitions";
-@import "~bootstrap/scss/dropdown";
-@import "~bootstrap/scss/button-group";
-@import "~bootstrap/scss/nav";
-@import "~bootstrap/scss/navbar"; // Requires nav
-@import "~bootstrap/scss/card";
-@import "~bootstrap/scss/breadcrumb";
-@import "~bootstrap/scss/accordion";
-@import "~bootstrap/scss/pagination";
-@import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/progress";
-@import "~bootstrap/scss/list-group";
-@import "~bootstrap/scss/close";
-@import "~bootstrap/scss/toasts";
-@import "~bootstrap/scss/modal"; // Requires transitions
-@import "~bootstrap/scss/tooltip";
-@import "~bootstrap/scss/popover";
-@import "~bootstrap/scss/carousel";
-@import "~bootstrap/scss/spinners";
-@import "~bootstrap/scss/offcanvas"; // Requires transitions
-// @import '~bootstrap/scss/placeholders'; // Causes issues with drupal, currently buggy - uncomment if needed
+// 1. Root first (configuration, colors, tokens, and CSS layers)
+@use "bootstrap/scss/root";
 
-// Utilities
-@import "~bootstrap/scss/utilities/api";
+// 2. Subdir imports
+@use "bootstrap/scss/content"; // reboot, type, images, tables
+@use "bootstrap/scss/layout"; // containers, grid
+@use "bootstrap/scss/forms";
+@use "bootstrap/scss/buttons"; // button, button-group, close
 
-// Helpers
-@import "~bootstrap/scss/helpers/clearfix";
-@import "~bootstrap/scss/helpers/color-bg";
-@import "~bootstrap/scss/helpers/colored-links";
-@import "~bootstrap/scss/helpers/position";
-@import "~bootstrap/scss/helpers/ratio";
-@import "~bootstrap/scss/helpers/stacks";
-@import "~bootstrap/scss/helpers/stretched-link";
-@import "~bootstrap/scss/helpers/text-truncation";
-@import "~bootstrap/scss/helpers/visually-hidden";
-@import "~bootstrap/scss/helpers/vr";
+// 3. Components
+@use "bootstrap/scss/transitions";
+@use "bootstrap/scss/menu";
+@use "bootstrap/scss/avatar";
+@use "bootstrap/scss/nav";
+@use "bootstrap/scss/navbar"; // Requires nav
+@use "bootstrap/scss/nav-overflow";
+@use "bootstrap/scss/card";
+@use "bootstrap/scss/breadcrumb";
+@use "bootstrap/scss/accordion";
+@use "bootstrap/scss/pagination";
+@use "bootstrap/scss/badge";
+@use "bootstrap/scss/alert";
+@use "bootstrap/scss/chip";
+@use "bootstrap/scss/progress";
+@use "bootstrap/scss/list-group";
+@use "bootstrap/scss/toasts";
+@use "bootstrap/scss/dialog"; // was modal
+@use "bootstrap/scss/tooltip";
+@use "bootstrap/scss/popover";
+@use "bootstrap/scss/carousel";
+@use "bootstrap/scss/stepper";
+@use "bootstrap/scss/spinner"; // was spinners
+@use "bootstrap/scss/drawer"; // was offcanvas
+// Drupal placeholder conflict fix
+@use "base/placeholder";
+
+// 4. Helpers and utilities
+@use "bootstrap/scss/helpers";
+@use "bootstrap/scss/utilities/api";

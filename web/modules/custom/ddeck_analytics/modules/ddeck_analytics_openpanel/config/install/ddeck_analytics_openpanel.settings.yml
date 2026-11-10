@@ -1,0 +1,9 @@
+client_id: ''
+secret_key: ''
+domain: ''
+server_api_endpoint: ''
+track_screen: true
+track_outgoing: false
+track_attributes: false
+excluded_paths:
+  - '/admin*'

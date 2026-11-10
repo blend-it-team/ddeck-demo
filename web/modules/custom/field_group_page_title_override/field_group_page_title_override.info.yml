@@ -1,0 +1,7 @@
+name: 'Field Group Page Title Override'
+type: module
+description: 'Provides a field group formatter to manage and override the entity page title block on a dedicated page view mode.'
+core_version_requirement: ^10 || ^11
+package: Fields
+dependencies:
+  - field_group:field_group

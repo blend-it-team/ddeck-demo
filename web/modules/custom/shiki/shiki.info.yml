@@ -1,0 +1,9 @@
+name: Shiki
+type: module
+description: 'Syntax highlighting with the Shiki library.'
+core_version_requirement: ^11
+package: Other
+configure: shiki.settings
+dependencies:
+  - drupal:field
+  - drupal:filter

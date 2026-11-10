@@ -1,0 +1,66 @@
+/**
+ * Variables
+ * Variables should follow the $component-state-property-size formula for
+ * consistent naming. Examples:
+ * $nav-link-disabled-color
+ * $modal-content-box-shadow-xs
+ *
+ * Customization:
+ * To customize Bootstrap variables:
+ * Copy the desired variable from node_modules/bootstrap/scss/_variables.scss
+ * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+ * Change the value and remove the !default flag.
+ * Examples:
+ * $body-bg: #000;
+ * $body-color: $gray-100;
+ */
+
+// Charte Claude / Anthropic
+$ivory:        #faf9f5; // fond de page
+$ivory-medium: #f0eee6; // surface
+$ivory-dark:   #e8e6dc; // filet, fond discret
+$slate:        #141413; // texte, fond sombre
+$slate-medium: #3d3d3a;
+$slate-light:  #5e5d59; // texte secondaire
+$cloud:        #b0aea5;
+$cloud-dark:   #87867f;
+$clay:         #d97757; // accent principal
+$clay-active:  #c6613f; // survol / appuyé
+$sky:          #6a9bcc;
+$olive:        #788c5d;
+$fig:          #c46686; // erreur
+$kraft:        #d4a27f; // avertissement
+$manilla:      #ebdbbc;
+$claude-font-sans: "Poppins, Arial, sans-serif";
+$claude-font-serif: "Lora, Georgia, 'Times New Roman', serif";
+
+// scss/_colors.scss
+$orange: $clay;       // #d97757
+$blue:   $sky;        // #6a9bcc
+$cyan:   $sky;        // #6a9bcc
+$green:  $olive;      // #788c5d
+$red:    $fig;        // #c46686
+$yellow: $kraft;      // #d4a27f
+$gray:   $cloud-dark; // #87867f
+$black:  $slate;      // #141413
+
+$primary: $orange;
+$secondary: $gray;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $ivory;
+$dark: $slate;
+
+$body-bg: $ivory;
+$body-color: $slate;
+
+// scss/_config.scss
+$radius: .75rem;
+$enable-gradients: false;
+$color-contrast-dark: $slate;   // #141413
+$color-contrast-light: $ivory;  // #faf9f5
+
+$form-label-margin-bottom:              .1rem;
+$form-label-font-weight:                600;

@@ -1,0 +1,25 @@
+services:
+  shiki.import_map:
+    class: Drupal\shiki\ImportMapBuilder
+    arguments:
+      - '@cache.default'
+      - '%app.root%'
+  Drupal\shiki\ImportMapBuilder:
+    alias: shiki.import_map
+
+  shiki.catalog:
+    class: Drupal\shiki\ShikiCatalog
+    arguments:
+      - '@cache.default'
+      - '%app.root%'
+  Drupal\shiki\ShikiCatalog:
+    alias: shiki.catalog
+
+  shiki.attachments:
+    class: Drupal\shiki\ShikiAttachments
+    arguments:
+      - '@config.factory'
+      - '@shiki.import_map'
+      - '@request_stack'
+  Drupal\shiki\ShikiAttachments:
+    alias: shiki.attachments

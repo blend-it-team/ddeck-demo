@@ -1,0 +1,24 @@
+ddeck_analytics_entity.settings:
+  path: '/admin/config/ddeck-analytics/entity'
+  defaults:
+    _form: '\Drupal\ddeck_analytics_entity\Form\SettingsForm'
+    _title: 'Entity analytics'
+  requirements:
+    _permission: 'administer site configuration'
+
+ddeck_analytics_entity.daily_chart:
+  path: '/ddeck-analytics/htmx/daily-chart/{entity_type}/{entity_id}/{path}/{range}'
+  defaults:
+    _controller: '\Drupal\ddeck_analytics_entity\Controller\ServerQueryController::dailyChart'
+    range: '30d'
+  requirements:
+    _entity_access: 'entity_id.update'
+    entity_type: '[a-z][a-z0-9_]*'
+    entity_id: '[^/]+'
+    path: '.+'
+    range: '[A-Za-z0-9_-]+'
+  options:
+    parameters:
+      entity_id:
+        type: 'entity:{entity_type}'
+    _htmx_route: true

@@ -1,0 +1,16 @@
+theme_light: github-light
+theme_dark: github-dark
+languages:
+  - html
+  - css
+  - javascript
+  - typescript
+  - json
+  - php
+  - python
+  - twig
+  - yaml
+  - xml
+  - sql
+  - markdown
+  - shellscript

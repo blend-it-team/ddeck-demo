@@ -1,0 +1,31 @@
+/**
+ * @file
+ * Maps ApexCharts --apx-* design tokens to Bootstrap 6 variables.
+ *
+ * @see https://apexcharts.com/docs/themes/#Design-tokens-and-OS-aware-themes
+ */
+
+.apexchart {
+  --apx-accent: var(--primary-base);
+  --apx-fore: var(--fg-body);
+  --apx-grid: var(--border-color);
+  --apx-surface: transparent;
+  --apx-series-1: var(--primary-base);
+  --apx-series-2: var(--primary-fg);
+  --apx-series-3: var(--accent-base);
+  --apx-series-4: var(--danger-base);
+  --apx-series-5: var(--success-base);
+  --apx-series-6: var(--secondary-base);
+}
+
+/* The canvas sets its own focus color, which beats an inherited value. */
+.apexchart .apexcharts-canvas,
+.apexchart .apexcharts-canvas.apexcharts-theme-dark,
+.apexchart .apexcharts-theme-dark.apexcharts-canvas {
+  --apexcharts-focus-color: var(--apx-accent);
+}
+
+.apexcharts-canvas text,
+.apexcharts-legend-text{
+  font-family: var(--body-font-family) !important;
+}

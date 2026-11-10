@@ -1,0 +1,9 @@
+name: 'DDeck Analytics Entity'
+type: module
+description: 'Display analytics results for each entity'
+core_version_requirement: ^11.3
+package: DDeck
+configure: ddeck_analytics_entity.settings
+dependencies:
+  - ddeck_analytics:ddeck_analytics
+  - ddeck_apexcharts:ddeck_apexcharts

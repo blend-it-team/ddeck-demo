@@ -1,0 +1,5 @@
+# Schema for the configuration files of the radix_theme_claude theme.
+
+radix_theme_claude.settings:
+  type: theme_settings
+  label: 'radix_theme_claude settings'

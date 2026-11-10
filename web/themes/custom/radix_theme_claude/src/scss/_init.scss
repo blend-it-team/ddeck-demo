@@ -1,0 +1,6 @@
+// Radix-specific parts (custom mixins and utilities).
+// Bootstrap internals are loaded via @use in _bootstrap.scss.
+// @see https://getbootstrap.com/docs/6.0/customize/sass/
+
+@use "base/mixins";
+@use "base/utilities";

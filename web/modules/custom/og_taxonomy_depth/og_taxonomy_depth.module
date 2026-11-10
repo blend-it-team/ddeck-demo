@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * @file
+ * Inherits OG access from parent taxonomy term groups.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+use Drupal\og\Og;
+use Drupal\og\OgMembershipInterface;
+use Drupal\og_taxonomy_depth\ParentGroupResolver;
+use Drupal\og_taxonomy_depth\Plugin\EntityReferenceSelection\OgTaxonomyDepthSelection;
+use Drupal\taxonomy\TermInterface;
+
+/**
+ * Implements hook_entity_reference_selection_alter().
+ *
+ * Swap OG's default selection handler so og_audience (and similar fields) also
+ * list child taxonomy term groups of groups the user belongs to.
+ */
+function og_taxonomy_depth_entity_reference_selection_alter(array &$info): void {
+  if (isset($info['og:default'])) {
+    $info['og:default']['class'] = OgTaxonomyDepthSelection::class;
+  }
+}
+
+/**
+ * Implements hook_node_access_records().
+ *
+ * On node create/update Drupal acquires grants from this hook. When
+ * og_audience references a taxonomy term group, grants are written for that
+ * term and each parent term that is also an OG group.
+ *
+ * Enabling/disabling this module flags a node access rebuild via core's
+ * hook_modules_installed()/uninstalled() because we implement hook_node_grants().
+ */
+function og_taxonomy_depth_node_access_records(NodeInterface $node): array {
+  /** @var \Drupal\og_taxonomy_depth\ParentGroupResolver $resolver */
+  $resolver = \Drupal::service('og_taxonomy_depth.parent_resolver');
+  $term_ids = $resolver->getGrantTermIds($node);
+  if (!$term_ids) {
+    return [];
+  }
+
+  $grants = [];
+  foreach ($term_ids as $tid) {
+    $grants[] = [
+      'realm' => ParentGroupResolver::REALM,
+      'gid' => $tid,
+      'grant_view' => 1,
+      'grant_update' => 1,
+      'grant_delete' => 1,
+      'priority' => 0,
+    ];
+  }
+  return $grants;
+}
+
+/**
+ * Implements hook_node_grants().
+ */
+function og_taxonomy_depth_node_grants(AccountInterface $account, $op): array {
+  if (!$account->isAuthenticated()) {
+    return [];
+  }
+
+  $gids = [];
+  $term_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
+  foreach (Og::getMemberships($account, [OgMembershipInterface::STATE_ACTIVE]) as $membership) {
+    if ($membership->getGroupEntityType() !== 'taxonomy_term') {
+      continue;
+    }
+    $tid = (int) $membership->getGroupId();
+    $gids[$tid] = $tid;
+
+    $group = $membership->getGroup();
+    if (!$group instanceof TermInterface) {
+      continue;
+    }
+    // Child term content also carries grants for parent GIDs; include children
+    // so members can match content assigned directly to a child term.
+    foreach ($term_storage->loadTree($group->bundle(), $tid, NULL, FALSE) as $child) {
+      $child_tid = (int) $child->tid;
+      $gids[$child_tid] = $child_tid;
+    }
+  }
+
+  if (!$gids) {
+    return [];
+  }
+
+  return [
+    ParentGroupResolver::REALM => array_values($gids),
+  ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update() for taxonomy_term.
+ */
+function og_taxonomy_depth_taxonomy_term_update(TermInterface $term): void {
+  if (!isset($term->original) || !$term->original instanceof TermInterface) {
+    return;
+  }
+
+  $original_parents = array_map('intval', array_column($term->original->get('parent')->getValue(), 'target_id'));
+  $new_parents = array_map('intval', array_column($term->get('parent')->getValue(), 'target_id'));
+  sort($original_parents);
+  sort($new_parents);
+  if ($original_parents === $new_parents) {
+    return;
+  }
+
+  \Drupal::service('og_taxonomy_depth.rebuilder')->rebuildForTerm($term);
+}

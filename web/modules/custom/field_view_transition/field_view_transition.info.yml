@@ -1,0 +1,7 @@
+name: 'Field view transition'
+type: module
+description: 'Allows setting view-transition-name and view-transition-class styles on field wrappers.'
+core_version_requirement: ^10 || ^11
+package: Field Formatters
+dependencies:
+  - drupal:field

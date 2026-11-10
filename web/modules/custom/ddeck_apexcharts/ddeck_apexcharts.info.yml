@@ -1,0 +1,5 @@
+name: 'DDeck ApexCharts'
+type: module
+description: 'Theme hook and component for rendering ApexCharts.'
+core_version_requirement: ^11
+package: DDeck

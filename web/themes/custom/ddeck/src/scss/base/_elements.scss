@@ -36,9 +36,68 @@ p, dd, li {
 
 .breadcrumb {
   margin: 0;
-  --bs-breadcrumb-divider : "›";
-  --bs-link-color-rgb: var(--bs-body-color-rgb);
-  --bs-link-opacity: 0.7;
-  --bs-breadcrumb-divider-color: var(--bs-tertiary-color);
+  --breadcrumb-divider-color: var(--fg-4);
+  --breadcrumb-link-color: var(--fg-3);
+}
 
+.btn {
+  font-weight: bold;
+}
+
+
+.node--unpublished {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+/**
+ * Variables
+ *
+ * Bootstrap 6 customizes via token maps passed with `@use ... with ()`.
+ * Copy keys from node_modules/bootstrap/scss/_root.scss ($root-tokens)
+ * and component token maps (e.g. $form-label-tokens in forms/_labels.scss).
+ * @see https://getbootstrap.com/docs/6.0/customize/sass/
+ */
+@mixin brand-color($name, $color, $contrast: #fff) {
+  --#{$name}-base: #{$color};
+  --#{$name}-bg: var(--#{$name}-base);
+  --#{$name}-contrast: #{$contrast};
+
+  --#{$name}-fg: light-dark(
+    color-mix(in oklch, #{$color}, black 30%),
+    color-mix(in oklch, #{$color}, white 40%)
+  );
+
+  --#{$name}-fg-emphasis: light-dark(
+    color-mix(in oklch, #{$color}, black 50%),
+    color-mix(in oklch, #{$color}, white 60%)
+  );
+
+  --#{$name}-bg-subtle: light-dark(
+    color-mix(in oklch, #{$color} 10%, white),
+    color-mix(in oklch, #{$color} 20%, #121212)
+  );
+
+  --#{$name}-bg-muted: light-dark(
+    color-mix(in oklch, #{$color} 20%, white),
+    color-mix(in oklch, #{$color} 30%, #121212)
+  );
+
+  --#{$name}-border: light-dark(
+    color-mix(in oklch, #{$color} 35%, white),
+    color-mix(in oklch, #{$color} 55%, #121212)
+  );
+
+  --#{$name}-focus-ring:
+    color-mix(in oklch, #{$color} 50%, transparent);
+}
+
+// Load the compiled output after Bootstrap's CSS.
+:root {
+  @include brand-color("primary", #4040FF);
+  @include brand-color("accent", #FF00BA);
 }

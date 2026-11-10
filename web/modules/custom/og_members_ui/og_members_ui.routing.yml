@@ -1,0 +1,12 @@
+og_members_ui.member_add:
+  path: 'group/{entity_type_id}/{group}/admin/members/add-member'
+  defaults:
+    _controller: '\Drupal\og_members_ui\Controller\GroupMembersController::addForm'
+    _title: 'Add member'
+  requirements:
+    _og_membership_add_access: 'TRUE'
+  options:
+    _admin_route: TRUE
+    parameters:
+      group:
+        type: entity:{entity_type_id}

@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Install and update functions for DDeck Analytics Entity.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Adds the server query provider setting.
+ */
+function ddeck_analytics_entity_update_11001(): void {
+  $config = \Drupal::configFactory()->getEditable('ddeck_analytics_entity.settings');
+  if ($config->get('server_query_plugin') === NULL) {
+    $config->set('server_query_plugin', '')->save(TRUE);
+  }
+}

@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for DDeck Analytics OpenPanel.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_update_N().
+ *
+ * Adds the optional secret_key setting for Key module integration.
+ */
+function ddeck_analytics_openpanel_update_10001(): void {
+  $config = \Drupal::configFactory()->getEditable('ddeck_analytics_openpanel.settings');
+  if ($config->get('secret_key') === NULL) {
+    $config->set('secret_key', '')->save(TRUE);
+  }
+}
+
+/**
+ * Adds the server-side API endpoint setting.
+ */
+function ddeck_analytics_openpanel_update_10002(): void {
+  $config = \Drupal::configFactory()->getEditable('ddeck_analytics_openpanel.settings');
+  if ($config->get('server_api_endpoint') === NULL) {
+    $config
+      ->set('server_api_endpoint', '')
+      ->save(TRUE);
+  }
+}

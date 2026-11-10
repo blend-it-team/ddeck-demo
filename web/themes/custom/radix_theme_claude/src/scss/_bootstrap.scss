@@ -1,0 +1,43 @@
+// Bootstrap 6 parts. Comment out unused modules.
+// @see https://getbootstrap.com/docs/6.0/customize/sass/#importing
+// -----------------------------------------------------------------------------
+
+@use "base/variables" as *;
+@use "base/theme";
+
+// 1. Root first (configuration, colors, tokens, and CSS layers)
+@use "bootstrap/scss/root";
+
+// 2. Subdir imports
+@use "bootstrap/scss/content"; // reboot, type, images, tables
+@use "bootstrap/scss/layout"; // containers, grid
+@use "bootstrap/scss/forms";
+@use "bootstrap/scss/buttons"; // button, button-group, close
+
+// 3. Components
+@use "bootstrap/scss/transitions";
+@use "bootstrap/scss/menu"; // was dropdown
+@use "bootstrap/scss/nav";
+@use "bootstrap/scss/navbar"; // Requires nav
+@use "bootstrap/scss/nav-overflow";
+@use "bootstrap/scss/card";
+@use "bootstrap/scss/breadcrumb";
+@use "bootstrap/scss/accordion";
+@use "bootstrap/scss/pagination";
+@use "bootstrap/scss/badge";
+@use "bootstrap/scss/alert";
+@use "bootstrap/scss/chip";
+@use "bootstrap/scss/progress";
+@use "bootstrap/scss/list-group";
+@use "bootstrap/scss/toasts";
+@use "bootstrap/scss/dialog"; // was modal
+@use "bootstrap/scss/tooltip";
+@use "bootstrap/scss/popover";
+@use "bootstrap/scss/carousel";
+@use "bootstrap/scss/spinner"; // was spinners
+@use "bootstrap/scss/drawer"; // was offcanvas
+// @use "bootstrap/scss/placeholder"; // Causes issues with drupal, currently buggy - uncomment if needed
+
+// 4. Helpers and utilities
+@use "bootstrap/scss/helpers";
+@use "bootstrap/scss/utilities/api";

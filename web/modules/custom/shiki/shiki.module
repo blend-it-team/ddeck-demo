@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Syntax highlighting with Shiki.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function shiki_help($route_name, RouteMatchInterface $route_match): ?string {
+  if ($route_name !== 'help.page.shiki') {
+    return NULL;
+  }
+
+  $output = '<h3>' . t('About') . '</h3>';
+  $output .= '<p>' . t('Shiki highlights code in text formats and on a code field. The library is loaded from the Composer-installed copy in the libraries directory.') . '</p>';
+  $output .= '<h3>' . t('Uses') . '</h3>';
+  $output .= '<p>' . t('Wrap a snippet in <code>[shiki:php]...[/shiki:php]</code>, or use a <code>&lt;pre&gt;&lt;code class="language-php"&gt;</code> block. Existing <code>[prism:]</code> tags are highlighted the same way.') . '</p>';
+  return $output;
+}

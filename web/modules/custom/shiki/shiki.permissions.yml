@@ -1,0 +1,4 @@
+administer shiki:
+  title: 'Administer Shiki'
+  description: 'Configure which themes and languages Shiki uses to highlight code.'
+  restrict access: true

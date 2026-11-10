@@ -1,0 +1,12 @@
+name: Embedded Content Examples
+type: module
+description: Provides example plugins for Ckeditor5 embedded content.
+package: Custom
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - drupal:embedded_content
+
+# Information added by Drupal.org packaging script on 2025-01-22
+version: '2.1.x-dev'
+project: 'embedded_content_examples'
+datestamp: 1737568250

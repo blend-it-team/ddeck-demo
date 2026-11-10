@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: ApexChart
+status: stable
+description: Wrapper that mounts an ApexCharts chart from JSON options.
+props:
+  type: object
+  required:
+    - chart_options
+  properties:
+    chart_options:
+      type: string
+      title: Chart options JSON
+      description: JSON-encoded ApexCharts options object.
+    height:
+      type: string
+      title: Height
+      description: CSS height of the chart wrapper.
+      default: 350px
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: HTML attributes

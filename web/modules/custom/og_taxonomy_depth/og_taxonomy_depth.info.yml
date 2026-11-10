@@ -1,0 +1,9 @@
+name: 'OG taxonomy depth'
+type: module
+description: 'When content is assigned to a taxonomy term OG group, writes node grants for parent term groups and applies parent OG role permissions.'
+core_version_requirement: ^10 || ^11
+package: Organic Groups
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - og:og

@@ -1,0 +1,265 @@
+<?php
+
+/**
+ * @file
+ * Contains book_extras.module.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Config\Entity\ThirdPartySettingsInterface;
+use Drupal\Core\Entity\BundleEntityFormBase;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\node\Entity\NodeType;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function book_extras_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the book_extras module.
+    case 'help.page.book_extras':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Helpers and extra features to enhance Drupal Book core functionalities') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function book_extras_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'book_admin_edit') {
+    $form['#submit'][] = '_book_extras_empty_book_cache';
+  }
+
+  // Entity type form
+  if ($form_state->getFormObject() instanceof BundleEntityFormBase) {
+    $entity = $form_state->getFormObject()->getEntity();
+
+    $form['book_features'] = [
+      '#type' => 'details',
+      '#title' => t('Book'),
+      '#collapsible' => TRUE,
+      '#group' => 'additional_settings',
+      '#description' => t('Define options for Book'),
+    ];
+
+    $form['book_features']['book_root'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Book root'),
+      '#description' => t('Define the entity as a Book root and create Book for every content created of this type'),
+      '#default_value' => $entity->getThirdPartySetting('book_extras', 'book_root'),
+      '#weight' => 1
+    );
+
+    $form['book_features']['book_remove_book_select'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Remove Book Select'),
+      '#description' => t('Remove Book Select field : Book ID must be set trough url'),
+      '#default_value' => $entity->getThirdPartySetting('book_extras', 'book_remove_book_select'),
+      '#weight' => 2
+    );
+    $form['book_features']['book_content'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Book content'),
+      '#description' => t('Check if the content can be part of a book'),
+      '#default_value' => $entity->getThirdPartySetting('book_extras', 'book_content'),
+      '#weight' => 3
+    );
+    $types = node_type_get_names();
+    $form['book_features']['book_child_node_type'] = array(
+      '#type' => 'checkboxes',
+      '#options' => $types,
+      '#title' => t('Book Content Childs'),
+      '#description' => t('Child content types'),
+      '#default_value' => $entity->getThirdPartySetting('book_extras', 'book_child_node_type', []),
+      '#weight' => 4,
+      '#states' => [
+        'visible' => [
+          ':input[name="book_content"]' => ['checked' => TRUE],
+        ],
+      ],
+    );
+
+    $form['#entity_builders'][] = 'book_extras_entity_form_builder';
+  }
+
+
+  // Entity form alter
+  $form_object = $form_state->getFormObject();
+
+  // Only alter entity forms that contain book controls.
+  if (!$form_object instanceof EntityFormInterface) {
+    return;
+  }
+
+  $entity = $form_object->getEntity();
+  $bundle_entity_type = $entity->getEntityType()->getBundleEntityType();
+
+  // Some entity types do not have a bundle configuration entity.
+  if (!$bundle_entity_type) {
+    return;
+  }
+
+  $bundle = \Drupal::entityTypeManager()
+    ->getStorage($bundle_entity_type)
+    ->load($entity->bundle());
+
+  if (!$bundle instanceof ThirdPartySettingsInterface) {
+    return;
+  }
+
+  $book_root = $bundle->getThirdPartySetting('book_extras', 'book_root', FALSE);
+  $book_content = $bundle->getThirdPartySetting('book_extras', 'book_content', FALSE);
+
+  if ($book_root && isset($form['book']['bid'])) {
+    $form['book']['bid']['#access'] = FALSE;
+
+    if (empty($form['book']['bid']['#default_value'])) {
+      $form['book']['bid']['#default_value'] = $entity->isNew()
+        ? 'new'
+        : $entity->id();
+    }
+  }
+
+  if (!$book_content) {
+    $form['book']['#access'] = FALSE;
+  }
+
+
+}
+
+function _book_extras_empty_book_cache(array &$form, FormStateInterface $form_state) {
+  // Empty book root cache to rebuild menu
+  $node = $form['#node'];
+  Cache::invalidateTags($node->getCacheTags());
+
+
+  // Empty first link to avoid content nodes caches on views
+  $menu = $form_state->getValue('table');
+  if ($menu) {
+    $first_link = reset($menu);
+    Cache::invalidateTags(['node:' . $first_link['nid']]);
+  }
+
+}
+
+/**
+ * Entity builder for the book features configuration entity.
+ */
+function book_extras_entity_form_builder($entity_type, \Drupal\Core\Entity\EntityBase $entity, &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $entity->setThirdPartySetting('book_extras', 'book_root', $form_state->getValue('book_root'));
+  $entity->setThirdPartySetting('book_extras', 'book_remove_book_select', $form_state->getValue('book_remove_book_select'));
+  $entity->setThirdPartySetting('book_extras', 'book_content', $form_state->getValue('book_content'));
+  $entity->setThirdPartySetting('book_extras', 'book_child_node_type', $form_state->getValue('book_child_node_type'));
+}
+
+/**
+ * Implements hook_entity_bundle_field_info().
+ */
+function book_extras_entity_bundle_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  $fields = [];
+  if ($entity_type->id() == 'node') {
+    $bundle = NodeType::load($bundle);
+    if ($bundle && $bundle->getThirdPartySetting('book_extras', 'book_content') === 1) {
+      $fields['book_childs'] = \Drupal\Core\Field\BaseFieldDefinition::create('book_child_contents')
+        ->setLabel(t('Book child contents'))
+        ->setDisplayConfigurable('view', TRUE);
+      $fields['book_menu_navigation'] = \Drupal\Core\Field\BaseFieldDefinition::create('book_menu_navigation')
+        ->setLabel(t('Book menu navigation'))
+        ->setDisplayConfigurable('view', TRUE);
+    }
+  }
+  return $fields;
+}
+
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ * Remove outline tab
+ */
+function book_extras_menu_local_tasks_alter(&$data, $route_name) {
+
+  if (!empty($data['tabs'][0]['entity.node.book_outline_form'])) {
+    unset($data['tabs'][0]['entity.node.book_outline_form']);
+  }
+
+}
+
+
+
+/**
+ * Implements hook_node_links_alter().
+ */
+function book_extras_node_links_alter(array &$links, NodeInterface $node, array &$context) {
+  if ($context['view_mode'] != 'rss') {
+    $account = \Drupal::currentUser();
+
+    if (isset($node->book['depth'])) {
+      if ($context['view_mode'] == 'full' && node_is_page($node)) {
+        $node_type = NodeType::load($node->bundle());
+        $book_child_node_types = $node_type->getThirdPartySetting('book_extras', 'book_child_node_type');
+        if ($book_child_node_types) {
+          foreach ($book_child_node_types as $bundle) {
+            if ($bundle = NodeType::load($bundle)) {
+              $book_links['book_add_child_' . $bundle->id()] = [
+                'title' => t('Add ' . $bundle->label()),
+                'url' => Url::fromRoute('node.add', ['node_type' => $bundle->id()], ['query' => ['parent' => $node->id()]]),
+              ];
+            }
+          }
+          if ($node->book['has_children']) {
+            $book_links['book_add_child'] = [
+              'title' => t('Manage pages order'),
+              'url' => Url::fromRoute('book.admin_edit', ['node' => $node->id()]),
+            ];
+          }
+
+        }
+
+
+
+        /*
+        $child_type = \Drupal::config('book.settings')->get('child_type');
+        $access_control_handler = \Drupal::entityManager()->getAccessControlHandler('node');
+        if (($account->hasPermission('add content to books') || $account->hasPermission('administer book outlines')) && $access_control_handler->createAccess($child_type) && $node->isPublished() && $node->book['depth'] < BookManager::BOOK_MAX_DEPTH) {
+          $book_links['book_add_child'] = [
+            'title' => t('Add child page'),
+            'url' => Url::fromRoute('node.add', ['node_type' => $child_type], ['query' => ['parent' => $node->id()]]),
+          ];
+        }
+        */
+        if ($account->hasPermission('access printer-friendly version')) {
+          $book_links['book_printer'] = [
+            'title' => t('Printer-friendly version'),
+            'url' => Url::fromRoute('book.export', [
+              'type' => 'html',
+              'node' => $node->id(),
+            ]),
+            'attributes' => ['title' => t('Show a printer-friendly version of this book page and its sub-pages.')],
+          ];
+        }
+      }
+    }
+
+    if (!empty($book_links)) {
+      $links['book'] = [
+        '#theme' => 'links__node__book',
+        '#links' => $book_links,
+        '#attributes' => ['class' => ['links', 'inline']],
+      ];
+    }
+  }
+}

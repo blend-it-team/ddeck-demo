@@ -1,0 +1,10 @@
+field.formatter.third_party.field_view_transition:
+  type: mapping
+  label: 'Field view transition settings'
+  mapping:
+    name:
+      type: string
+      label: 'View transition name'
+    class:
+      type: string
+      label: 'View transition class'

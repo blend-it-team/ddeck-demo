@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Page attachment hooks for OpenPanel analytics.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Render\Markup;
+use Drupal\ddeck_analytics_openpanel\Service\EndpointResolver;
+use Drupal\ddeck_analytics_openpanel\Service\PathExclusion;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ddeck_analytics_openpanel_page_attachments(array &$attachments): void {
+  if (\Drupal::service('ddeck_analytics_openpanel.path_exclusion')->isExcluded()) {
+    return;
+  }
+
+  $config = \Drupal::config('ddeck_analytics_openpanel.settings');
+  $client_id = trim((string) $config->get('client_id'));
+  if ($client_id === '') {
+    return;
+  }
+
+  /** @var \Drupal\ddeck_analytics_openpanel\Service\EndpointResolver $endpoint_resolver */
+  $endpoint_resolver = \Drupal::service('ddeck_analytics_openpanel.endpoint_resolver');
+  /** @var \Drupal\ddeck_analytics_openpanel\Service\SecretResolver $secret_resolver */
+  $secret_resolver = \Drupal::service('ddeck_analytics_openpanel.secret_resolver');
+
+  $init = [
+    'clientId' => $client_id,
+    'apiUrl' => $endpoint_resolver->getApiUrl(),
+    'trackScreenViews' => (bool) $config->get('track_screen'),
+    'trackOutgoingLinks' => (bool) $config->get('track_outgoing'),
+    'trackAttributes' => (bool) $config->get('track_attributes'),
+  ];
+
+  $bootstrap = '(function(){window.op=window.op||function(){(window.op.q=window.op.q||[]).push(arguments)};window.op(\'init\',' . Json::encode($init) . ');})();';
+
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'script',
+      '#value' => Markup::create($bootstrap),
+      '#attributes' => ['data-openpanel' => 'bootstrap'],
+    ],
+    'openpanel_bootstrap',
+  ];
+
+  $local_op_js_url = $endpoint_resolver->getLocalOpJsUrl();
+
+  $attachments['#attached']['html_head_link'][][] = [
+    'rel' => 'preload',
+    'href' => $local_op_js_url,
+    'as' => 'script',
+  ];
+
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'script',
+      '#attributes' => [
+        'src' => $local_op_js_url,
+        'defer' => 'defer',
+        'async' => 'async',
+        'data-openpanel' => 'sdk',
+      ],
+    ],
+    'openpanel_sdk',
+  ];
+}

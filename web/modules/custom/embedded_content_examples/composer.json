@@ -1,0 +1,22 @@
+{
+    "name": "drupal/embedded_content_examples",
+    "type": "drupal-module",
+    "description": "Examples for Embedded Content.",
+    "homepage": "http://drupal.org/project/embedded_content_examples",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/embedded_content": "^2",
+        "drupal/core": "^9 || ^10 || ^11"
+    },
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/embedded_content_examples",
+        "source": "https://git.drupalcode.org/project/embedded_content_examples"
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    }
+}
+

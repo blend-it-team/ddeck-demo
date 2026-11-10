@@ -1,0 +1,5 @@
+<div{{ attributes.addClass('apexchart') }}
+  id="{{ 'apexchart'|clean_unique_id }}"
+  data-chart-options="{{ chart_options|e('html_attr') }}"
+  style="height: {{ height|e('html_attr') }}"
+></div>

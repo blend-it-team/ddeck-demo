@@ -20,7 +20,6 @@
     "drupal/htmx": "^2.0@beta",
     "drupal/radix": "^6.0",
     "drupal/radix_admin": "^6.0@alpha",
-    "drupal/tagify": "^1.2",
     "drupal/token": "^1.17",
     "drupal/trash": "^3.0",
     "drupal/pathauto" : "^1.14"

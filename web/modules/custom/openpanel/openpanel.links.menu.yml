@@ -1,0 +1,5 @@
+openpanel.settings:
+  title: OpenPanel
+  description: 'Configure OpenPanel analytics tracking.'
+  route_name: openpanel.settings
+  parent: system.admin_config_services

@@ -1,0 +1,13 @@
+ddeck_analytics_entity.settings:
+  type: config_object
+  label: 'DDeck Analytics Entity settings'
+  mapping:
+    enabled_entity_types:
+      type: sequence
+      label: 'Enabled entity types'
+      sequence:
+        type: string
+        label: 'Entity type ID'
+    server_query_plugin:
+      type: string
+      label: 'Analytics server query provider'

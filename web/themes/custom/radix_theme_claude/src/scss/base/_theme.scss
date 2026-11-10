@@ -1,0 +1,114 @@
+@use "variables" as *;
+
+@use "bootstrap/scss/config" with (
+  $font-sizes: (
+    "xs": (
+      "font-size": .75rem,
+      "line-height": 1.5
+    ),
+    "sm": (
+      "font-size": .875rem,
+      "line-height": 2
+    ),
+    "md": (
+      "font-size": 1rem,
+      "line-height": 2
+    ),
+    "lg": (
+      "font-size": clamp(1.125rem, 1rem + .625vw, 1.25rem),
+      "line-height": 2
+    ),
+    "xl": (
+      "font-size": clamp(2rem, 1.1rem + .75vw, 1.75rem),
+      "line-height": calc(2.5 / 1.75)
+    ),
+    "2xl": (
+      "font-size": clamp(1.75rem, 1.3rem + 1vw, 2rem),
+      "line-height": calc(3 / 2.25)
+    ),
+    "3xl": (
+      "font-size": clamp(2rem, 1.5rem + 1.875vw, 2.5rem),
+      "line-height": 1.2
+    ),
+    "4xl": (
+      "font-size": clamp(2.25rem, 1.75rem + 2.5vw, 3rem),
+      "line-height": 1.1
+    ),
+    "5xl": (
+      "font-size": clamp(3rem, 2rem + 5vw, 4rem),
+      "line-height": 1.1
+    ),
+    "6xl": (
+      "font-size": clamp(3.75rem, 2.5rem + 6.25vw, 5rem),
+      "line-height": 1
+    ),
+  )
+);
+
+@use "bootstrap/scss/colors" with (
+  $orange: $orange,
+  $blue: $blue,
+  $cyan: $cyan,
+  $green: $green,
+  $red: $red,
+  $yellow: $yellow,
+  $gray: $gray,
+  $black: $black
+);
+
+@use "bootstrap/scss/theme" with (
+  $theme-colors: (
+    "primary": (
+      "base": $clay,
+      "fg": light-dark(#a84b32, #e7b5a3),
+      "fg-emphasis": light-dark($clay-active, #f0d2c6),
+      "bg": $clay,
+      "bg-subtle": light-dark(#f8ebe6, #3d2a24),
+      "bg-muted": light-dark(#f0d8cf, #5c3b32),
+      "border": light-dark(#e3b5a4, #a84b32),
+      "focus-ring": light-dark(color-mix(in oklch, #{$clay} 45%, #{$ivory}), color-mix(in oklch, #{$clay} 70%, #{$slate})),
+      "contrast": $slate
+    ),
+  ),
+  $theme-bgs: (
+    "body": light-dark($ivory, $slate),
+  ),
+  $theme-fgs: (
+    "body": light-dark($slate, $ivory),
+  ),
+);
+
+@use "bootstrap/scss/utilities" with (
+  $utilities: (
+    "font-family-monospace": (
+      property: font-family,
+      class: font-monospace,
+      values: (
+        "monospace": $claude-font-sans,
+      ),
+    ),
+    "font-family-serif": (
+      property: font-family,
+      class: font-serif,
+      values: (
+        "serif": $claude-font-serif,
+      ),
+    )
+  )
+);
+
+@use "bootstrap/scss/content/reboot" with (
+  $type-tokens:
+    (
+      --heading-margin-bottom: var(--spacer-2),
+      --heading-font-family: $claude-font-serif,
+      --heading-font-style: null,
+      --heading-line-height: 1.2,
+      --paragraph-margin-bottom: var(--spacer),
+      --legend-margin-bottom: var(--spacer-2),
+      --legend-font-size: 1.5rem,
+      --legend-font-weight: null,
+      --list-padding-x: var(--spacer-7),
+    )
+);
+

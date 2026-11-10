@@ -50,7 +50,6 @@ mix.browserSync({
   |--------------------------------------------------------------------------
 */
 mix.sass("src/scss/main.style.scss", "build/css/main.style.css");
-mix.sass("src/scss/select2/select2-bootstrap-5-theme.scss", "build/css/select2.css");
 
 for (const sourcePath of glob.sync("components/**/*.scss")) {
   const destinationPath = sourcePath.replace(/\.scss$/, ".css");

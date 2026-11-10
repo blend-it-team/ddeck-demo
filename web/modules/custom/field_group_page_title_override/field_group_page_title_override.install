@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for Field Group Page Title Override.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function field_group_page_title_override_install() {
+  // Create a page_title view mode for each entity type with a view builder.
+  $info = \Drupal::entityTypeManager()->getDefinitions();
+  $storage = \Drupal::entityTypeManager()->getStorage('entity_view_mode');
+  foreach ($info as $entity_type => $entity_type_info) {
+    if (!$entity_type_info->getViewBuilderClass()) {
+      continue;
+    }
+    if (!$storage->load("$entity_type.page_title")) {
+      $storage->create([
+        'targetEntityType' => $entity_type,
+        'id' => "$entity_type.page_title",
+        'status' => TRUE,
+        'label' => t('Page Title'),
+      ])->save();
+    }
+  }
+}

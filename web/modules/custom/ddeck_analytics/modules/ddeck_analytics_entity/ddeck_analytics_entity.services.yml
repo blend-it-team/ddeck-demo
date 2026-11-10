@@ -1,0 +1,21 @@
+services:
+  logger.channel.ddeck_analytics_entity:
+    parent: logger.channel_base
+    arguments: ['ddeck_analytics_entity']
+
+  plugin.manager.analytics_server_query:
+    class: Drupal\ddeck_analytics_entity\AnalyticsServerQueryPluginManager
+    parent: default_plugin_manager
+
+  ddeck_analytics_entity.entity_type_helper:
+    class: Drupal\ddeck_analytics_entity\EntityTypeHelper
+    arguments:
+      - '@entity_type.manager'
+      - '@config.factory'
+
+  ddeck_analytics_entity.route_subscriber:
+    class: Drupal\ddeck_analytics_entity\Routing\RouteSubscriber
+    arguments:
+      - '@ddeck_analytics_entity.entity_type_helper'
+    tags:
+      - { name: event_subscriber }

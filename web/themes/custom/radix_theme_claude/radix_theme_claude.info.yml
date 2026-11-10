@@ -1,0 +1,24 @@
+name: radix_theme_claude
+description: "radix_theme_claude theme based on <a href='https://www.drupal.org/project/radix' target='_blank'>Radix 6.x</a> and Bootstrap 5.x"
+screenshot: screenshot.png
+'alt text': 'radix_theme_claude theme screenshot'
+core_version_requirement: ^11
+engine: twig
+type: theme
+'base theme': radix_admin
+starterkit: true
+dependencies:
+  - 'drupal:radix'
+  - 'drupal:radix_admin'
+regions:
+  header: Header
+  header_expanded: 'Header expanded'
+  sidebar: Sidebar
+  sidebar_footer: 'Sidebar footer'
+  content: Content
+libraries:
+  - radix_theme_claude/style
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+version: 6.0.9
+generator: 'radix_starterkit:unknown-version'

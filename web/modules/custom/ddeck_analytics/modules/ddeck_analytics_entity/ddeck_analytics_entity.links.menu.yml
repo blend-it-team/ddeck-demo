@@ -1,0 +1,6 @@
+ddeck_analytics_entity.settings:
+  title: 'Entity analytics'
+  description: 'Choose which entity types show an Analytics tab.'
+  route_name: ddeck_analytics_entity.settings
+  parent: ddeck_analytics.overview
+  weight: 20
