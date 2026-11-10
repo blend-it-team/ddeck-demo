@@ -1,4 +1,4 @@
-FROM php:8.4-apache AS build
+FROM php:8.4-apache
 
 RUN printf '%s\n' 'max_execution_time = 300' \
     > "$PHP_INI_DIR/conf.d/99-timeout.ini"
