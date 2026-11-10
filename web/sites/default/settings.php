@@ -5,7 +5,10 @@
  */
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
-$_SERVER['HTTPS'] = 'on';
+$settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy_addresses'] = ['127.0.0.1'];
+$settings['reverse_proxy_trusted_headers'] =
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO;
 
 set_time_limit(300);
 
