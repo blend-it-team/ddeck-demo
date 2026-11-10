@@ -215,7 +215,6 @@
         },
         "patches": {
             "drupal/core": {
-                "CSS validation rules fix " : "./patches/css-validation-fix.patch",
                 "Disable navigation Top bar" : "./patches/disable-navigation-topbar.patch",
                 "CSS validation fix" : "https://www.drupal.org/files/issues/2026-08-17/3187258-css_class_validation.36.patch"
             },
