@@ -8,7 +8,7 @@ packages:
     colinodell/psr-testlogger: v1.3.1
     composer/ca-bundle: 1.6.1
     composer/class-map-generator: 1.9.0
-    composer/composer: 2.11.1
+    composer/composer: 2.11.2
     composer/installers: v2.3.0
     composer/metadata-minifier: 1.0.1
     composer/pcre: 3.4.0
@@ -52,7 +52,7 @@ packages:
     drupal/canvas: 1.12.0
     drupal/ckeditor5_bootstrap: 1.0.2
     drupal/ckeditor5_bootstrap_accordion: 1.1.0
-    drupal/ckeditor5_max_block_width: 1.0.0-alpha2
+    drupal/ckeditor5_max_block_width: 1.0.0-alpha3
     drupal/ckeditor_details: 2.2.0-beta2
     drupal/cl_editorial: 3.0.0
     drupal/code_component: 1.0.0-alpha1
@@ -70,7 +70,7 @@ packages:
     drupal/core-recommended: 11.4.12
     drupal/crop: 2.6.0
     drupal/ctools: 4.1.1
-    drupal/ddeck_advanced_media: 1.0.0-alpha9
+    drupal/ddeck_advanced_media: 1.0.0-alpha10
     drupal/ddeck_entity_social_share: 2.0.0-alpha1
     drupal/diff: 2.1.1
     drupal/easy_breadcrumb: 2.0.11
@@ -164,7 +164,7 @@ packages:
     marc-mabe/php-enum: v4.7.2
     masterminds/html5: 2.12.0
     mck89/peast: v1.17.7
-    mglaman/phpstan-drupal: 2.3.0
+    mglaman/phpstan-drupal: 2.4.0
     micheh/phpcs-gitlab: 2.1.0
     mikey179/vfsstream: v1.6.12
     mkalkbrenner/php-htmldiff-advanced: 0.0.8
@@ -221,7 +221,7 @@ packages:
     npm-asset/unist-util-visit-parents: 6.1.0
     npm-asset/vfile: 6.0.3
     npm-asset/vfile-message: 4.0.3
-    npm-asset/videojs--cdn: 10.2.0
+    npm-asset/videojs--cdn: 10.3.0
     npm-asset/yaireo--tagify: 4.39.0
     npm-asset/zwitch: 2.0.4
     nyholm/psr7-server: 1.1.0

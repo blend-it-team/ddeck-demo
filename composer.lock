@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a54e95c7090a9bcfee7096c5c80126a",
+    "content-hash": "488d378189d8f18b8af723537110f204",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2899,17 +2899,17 @@
         },
         {
             "name": "drupal/ckeditor5_max_block_width",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor5_max_block_width.git",
-                "reference": "1.0.0-alpha2"
+                "reference": "1.0.0-alpha3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor5_max_block_width-1.0.0-alpha2.zip",
-                "reference": "1.0.0-alpha2",
-                "shasum": "73dc6dab199e02bd8746cf6f8cd5dee7c3ef0c6c"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor5_max_block_width-1.0.0-alpha3.zip",
+                "reference": "1.0.0-alpha3",
+                "shasum": "0cfaca853655348997465313a735e4ece36bf063"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
@@ -2917,8 +2917,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha2",
-                    "datestamp": "1778752240",
+                    "version": "1.0.0-alpha3",
+                    "datestamp": "1794344915",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -4040,17 +4040,17 @@
         },
         {
             "name": "drupal/ddeck_advanced_media",
-            "version": "1.0.0-alpha9",
+            "version": "1.0.0-alpha10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ddeck_advanced_media.git",
-                "reference": "1.0.0-alpha9"
+                "reference": "1.0.0-alpha10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ddeck_advanced_media-1.0.0-alpha9.zip",
-                "reference": "1.0.0-alpha9",
-                "shasum": "2e46364c4de9a76a8f2d72a7135fd0c76b80bc65"
+                "url": "https://ftp.drupal.org/files/projects/ddeck_advanced_media-1.0.0-alpha10.zip",
+                "reference": "1.0.0-alpha10",
+                "shasum": "2bc3fccbdcb649e8eb772e8e08c28534d467aa5f"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
@@ -4058,8 +4058,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha9",
-                    "datestamp": "1794234053",
+                    "version": "1.0.0-alpha10",
+                    "datestamp": "1794242426",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -11318,11 +11318,11 @@
         },
         {
             "name": "npm-asset/videojs--cdn",
-            "version": "10.2.0",
+            "version": "10.3.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/@videojs/cdn/-/cdn-10.2.0.tgz",
-                "shasum": "c4c84ce459de64ba0624791461b084cc221c4bb1"
+                "url": "https://registry.npmjs.org/@videojs/cdn/-/cdn-10.3.0.tgz",
+                "shasum": "768312306b72a6750a7ec8a17f29f13e8febfc40"
             },
             "type": "npm-asset",
             "license": [
@@ -16986,16 +16986,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.11.1",
+            "version": "2.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "472b418967419c6124edd91dc6310a3bec091dae"
+                "reference": "12c820dbc3f030954b1d09f5884fcf1e9d29d6cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/472b418967419c6124edd91dc6310a3bec091dae",
-                "reference": "472b418967419c6124edd91dc6310a3bec091dae",
+                "url": "https://api.github.com/repos/composer/composer/zipball/12c820dbc3f030954b1d09f5884fcf1e9d29d6cb",
+                "reference": "12c820dbc3f030954b1d09f5884fcf1e9d29d6cb",
                 "shasum": ""
             },
             "require": {
@@ -17085,7 +17085,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.11.1"
+                "source": "https://github.com/composer/composer/tree/2.11.2"
             },
             "funding": [
                 {
@@ -17097,7 +17097,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-30T13:52:10+00:00"
+            "time": "2026-11-10T09:09:37+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -17872,16 +17872,16 @@
         },
         {
             "name": "mglaman/phpstan-drupal",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mglaman/phpstan-drupal.git",
-                "reference": "517b460c44f55f8b40aa9dfaf4e43e6593ecf1b5"
+                "reference": "174a0d78a70e79f4a139e78d9b904b56f535cc65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/517b460c44f55f8b40aa9dfaf4e43e6593ecf1b5",
-                "reference": "517b460c44f55f8b40aa9dfaf4e43e6593ecf1b5",
+                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/174a0d78a70e79f4a139e78d9b904b56f535cc65",
+                "reference": "174a0d78a70e79f4a139e78d9b904b56f535cc65",
                 "shasum": ""
             },
             "require": {
@@ -17897,6 +17897,7 @@
                 "composer/installers": "^1.9 || ^2",
                 "drupal/core-recommended": "^11",
                 "drush/drush": "^11 || ^12 || ^13",
+                "nette/neon": "^3.0",
                 "phpstan/extension-installer": "^1.4.3",
                 "phpstan/phpstan-strict-rules": "^2.0",
                 "phpunit/phpunit": "^9 || ^10 || ^11",
@@ -17953,7 +17954,7 @@
             "description": "Drupal extension and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/mglaman/phpstan-drupal/issues",
-                "source": "https://github.com/mglaman/phpstan-drupal/tree/2.3.0"
+                "source": "https://github.com/mglaman/phpstan-drupal/tree/2.4.0"
             },
             "funding": [
                 {
@@ -17969,7 +17970,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-05T18:22:32+00:00"
+            "time": "2026-11-09T21:03:37+00:00"
         },
         {
             "name": "micheh/phpcs-gitlab",
