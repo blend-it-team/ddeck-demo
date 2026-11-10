@@ -1,0 +1,21 @@
+.ck-content > * {
+  transition:
+    max-width 0.3s ease,
+    outline-color var(--ck-widget-handler-animation-duration) var(--ck-widget-handler-animation-curve) !important;
+  max-width: var(--max-w-regular) !important;
+  margin-inline: auto !important;
+}
+
+
+.ck-content .max-w-wide {
+  max-width: var(--max-w-wide) !important;
+}
+
+.ck-content .max-w-full {
+  max-width: none !important;
+}
+
+.ck-content .text-align-center {
+  /* remove widget alignments */
+  width: 100%;
+}

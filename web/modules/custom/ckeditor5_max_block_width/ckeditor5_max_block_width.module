@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Max Width module.
+ */
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ckeditor5_max_block_width_page_attachments(array &$attachments): void {
+  $attachments['#attached']['library'][] = 'ckeditor5_max_block_width/styles';
+}
