@@ -1,3 +1,5 @@
+FROM php:8.4-apache AS build
+
 FROM php:8.4-apache
 
 RUN printf '%s\n' 'max_execution_time = 300' \
@@ -23,6 +25,7 @@ RUN apt-get update && apt-get install -y \
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
 WORKDIR /var/www/html
+COPY --from=build /var/www/html /var/www/html
 
 COPY composer.json composer.lock ./
 RUN composer install \
