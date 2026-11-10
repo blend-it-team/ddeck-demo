@@ -22,6 +22,8 @@ COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 WORKDIR /var/www/html
 
 COPY composer.json composer.lock ./
+COPY patches/ ./patches/
+
 RUN composer install \
     --no-dev \
     --prefer-dist \
