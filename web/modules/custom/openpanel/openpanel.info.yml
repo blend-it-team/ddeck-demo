@@ -1,8 +1,0 @@
-name: OpenPanel
-type: module
-description: 'Integrates OpenPanel analytics with ad-blocker resistant script inlining and API proxying through your domain.'
-core_version_requirement: ^11
-package: Analytics
-configure: openpanel.settings
-dependencies:
-  - key:key

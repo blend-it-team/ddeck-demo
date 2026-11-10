@@ -1,8 +1,0 @@
-client_id: ''
-secret_key: ''
-domain: ''
-track_screen: true
-track_outgoing: false
-track_attributes: false
-excluded_paths:
-  - '/admin*'
