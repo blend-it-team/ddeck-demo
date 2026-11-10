@@ -5,6 +5,8 @@
  */
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
+$_SERVER['HTTPS'] = 'on';
+
 set_time_limit(300);
 
 $databases['default']['default'] = [
