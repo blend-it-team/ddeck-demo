@@ -1,5 +1,8 @@
 FROM php:8.4-apache AS build
 
+RUN printf '%s\n' 'max_execution_time = 300' \
+    > "$PHP_INI_DIR/conf.d/99-timeout.ini"
+
 RUN apt-get update && apt-get install -y \
     git unzip curl \
     libzip-dev \
