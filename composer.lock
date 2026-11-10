@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff4e5e2bf53cc53ef292326d46d1fde0",
+    "content-hash": "6a54e95c7090a9bcfee7096c5c80126a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1062,90 +1062,6 @@
                 }
             ],
             "time": "2025-10-30T23:44:22+00:00"
-        },
-        {
-            "name": "ddeck-common/base",
-            "version": "1.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ddeck-common/base.git",
-                "reference": "8b314ce45cc2a6f3e0073a3228b0e0a24236d7aa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ddeck-common/base/zipball/8b314ce45cc2a6f3e0073a3228b0e0a24236d7aa",
-                "reference": "8b314ce45cc2a6f3e0073a3228b0e0a24236d7aa",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/block_class": "^4.0",
-                "drupal/core": "^11.3",
-                "drupal/entity_page_title_manage_display": "^1.0@alpha",
-                "drupal/entity_stretched_link": "^1.0@alpha",
-                "drupal/field_formatter_class": "^1.8",
-                "drupal/field_group": "^4.0",
-                "drupal/helper_class": "^1.0@alpha",
-                "drupal/htmx": "^2.0@beta",
-                "drupal/pathauto": "^1.14",
-                "drupal/radix": "^6.0",
-                "drupal/radix_admin": "^6.0@alpha",
-                "drupal/token": "^1.17",
-                "drupal/trash": "^3.0"
-            },
-            "type": "drupal-recipe",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Vahe Chahbenderian",
-                    "homepage": "https://www.drupal.org/u/wwwahe"
-                }
-            ],
-            "description": "Simple base configuration for modern Drupal.",
-            "support": {
-                "issues": "https://github.com/ddeck-common/base/issues",
-                "source": "https://github.com/ddeck-common/base/tree/1.0.0-beta2"
-            },
-            "time": "2026-09-09T15:57:54+00:00"
-        },
-        {
-            "name": "ddeck-common/news-recipe",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ddeck-common/news-recipe.git",
-                "reference": "faaa5fd0450a3d2f211bfa85e8ef157dda660126"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ddeck-common/news-recipe/zipball/faaa5fd0450a3d2f211bfa85e8ef157dda660126",
-                "reference": "faaa5fd0450a3d2f211bfa85e8ef157dda660126",
-                "shasum": ""
-            },
-            "require": {
-                "ddeck-common/base": ">=1.0",
-                "drupal/color_field": ">=3.0",
-                "drupal/entity_stretched_link": ">=1.0@alpha",
-                "drupal/field_formatter_class": ">=1.8",
-                "drupal/field_group": ">=4.0.0",
-                "drupal/focal_point": ">=2.1.2",
-                "drupal/helper_class": ">=1.0@alpha",
-                "drupal/manage_display": ">=3.0",
-                "drupal/pathauto": ">=1.14",
-                "drupal/scheduler": ">=2.2",
-                "drupal/tagify": ">=1.2.50",
-                "npm-asset/yaireo--tagify": ">=4.36"
-            },
-            "default-branch": true,
-            "type": "drupal-recipe",
-            "notification-url": "https://packagist.org/downloads/",
-            "support": {
-                "issues": "https://github.com/ddeck-common/news-recipe/issues",
-                "source": "https://github.com/ddeck-common/news-recipe/tree/main"
-            },
-            "time": "2026-09-09T16:06:18+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -7242,17 +7158,17 @@
         },
         {
             "name": "drupal/radix_admin",
-            "version": "6.0.0-alpha18",
+            "version": "7.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/radix_admin.git",
-                "reference": "6.0.0-alpha18"
+                "reference": "7.0.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/radix_admin-6.0.0-alpha18.zip",
-                "reference": "6.0.0-alpha18",
-                "shasum": "1f74a8817335c5b4def754c3a132c2bd84bba7f4"
+                "url": "https://ftp.drupal.org/files/projects/radix_admin-7.0.0-alpha1.zip",
+                "reference": "7.0.0-alpha1",
+                "shasum": "7550afa962332f5565cf0b23a6814eae6497ee49"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -7264,8 +7180,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-alpha18",
-                    "datestamp": "1789978509",
+                    "version": "7.0.0-alpha1",
+                    "datestamp": "1794323407",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -22035,7 +21951,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "ddeck-common/news-recipe": 20,
         "drupal/ai_ckeditor": 10,
         "drupal/ai_search": 15,
         "drupal/ajax_comments": 10,

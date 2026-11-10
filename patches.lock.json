@@ -1,0 +1,29 @@
+{
+    "_hash": "c353f3bfc3bca847d3b0712ce583bfdf93a8b41ff93d465333e515f2e6a09e05",
+    "patches": {
+        "drupal/core": [
+            {
+                "package": "drupal/core",
+                "description": "CSS validation fix",
+                "url": "https://www.drupal.org/files/issues/2026-08-17/3187258-css_class_validation.36.patch",
+                "sha256": "7b242480c4e90c24a95aca095ffe15c8053f5d9887fbdaf0e52d6bc0d24deeee",
+                "depth": 2,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/field_group": [
+            {
+                "package": "drupal/field_group",
+                "description": "[#3192985] CSS validation fix",
+                "url": "https://www.drupal.org/files/issues/2021-01-15/allow_more_chars_in_css_classes.patch",
+                "sha256": "9eff6441c8070b42b1afd47cd004f6e706391d8fad1a0574d804c5596f405ae0",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}
