@@ -140,7 +140,7 @@ packages:
     drupal/votingapi: 3.0.0-beta6
     drupal/votingapi_reaction: 1.13.0
     drupal/workflow_buttons: 1.0.0-beta7
-    drush/drush: 13.8.0
+    drush/drush: 13.8.1
     e0ipso/schema-forms: v2.5.4
     e0ipso/shaper: 1.2.7
     egulias/email-validator: 4.0.4
