@@ -67,7 +67,10 @@ final class EndpointResolver {
    * Returns the local first-party URL used to load op1.js with defer.
    */
   public function getLocalOpJsUrl(): string {
-    return Url::fromRoute('openpanel.op1_js', [], ['absolute' => TRUE, 'https' => TRUE])->toString();
+    $url = Url::fromRoute('openpanel.op1_js', [], ['absolute' => TRUE, 'https' => TRUE])->toString();
+
+    // always for https over http
+    return preg_replace('~^http://~i', 'https://', $url);
   }
 
 }
