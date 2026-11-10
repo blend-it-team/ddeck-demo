@@ -5,6 +5,7 @@
  */
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
+set_time_limit(300);
 
 $databases['default']['default'] = [
   'database' => getenv('DB_DATABASE'),
