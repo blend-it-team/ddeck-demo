@@ -48,7 +48,7 @@ packages:
     drupal/block_field: 1.0.0-rc5
     drupal/blockgroup: 2.0.3
     drupal/book: 3.0.8
-    drupal/bootstrap_color_modes_toggler: 2.0.0-alpha4
+    drupal/bootstrap_color_modes_toggler: 2.0.0-alpha5
     drupal/canvas: 1.12.0
     drupal/ckeditor5_bootstrap: 1.0.2
     drupal/ckeditor5_bootstrap_accordion: 1.1.0
